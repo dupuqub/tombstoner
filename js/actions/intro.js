@@ -261,7 +261,7 @@ P.actions.intro =
         info  :
         [
           {
-            text  : 'Crew limit = 0<br>Mod limit = 5<br>',
+            text  : 'Crew limit = 0<br>Mod limit = 5<br>Shield = 3',
             needs : []
           },
         ],
@@ -276,7 +276,7 @@ P.actions.intro =
         info    :
         [
           {
-            text  : 'Crew limit = 2<br>Mod limit = 2<br>',
+            text  : 'Crew limit = 2<br>Mod limit = 2<br>Shield = 5',
             needs : []
           },
         ],
@@ -291,7 +291,7 @@ P.actions.intro =
         info  :
         [
           {
-            text  : 'Crew limit = 3<br>Mod limit = 0<br>',
+            text  : 'Crew limit = 3<br>Mod limit = 0<br>Shield = 7',
             needs : [],
           },
         ],
