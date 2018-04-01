@@ -1,0 +1,22 @@
+
+'use strict'
+
+//......................................................................................................................
+
+P.mouse_move = event =>
+{
+  P.dom.action_console.innerHTML = ''
+
+  if(event.target.id.slice(0, -2) === 'action_choice')
+  {
+    const
+    index_number = Number(event.target.id.slice(-1)),
+    choice       = P.state.action.choices[index_number]
+
+    P.dom.action_console.innerHTML = choice.info
+      .filter(P.have_all_needs)
+      .map   (P.write_info)
+      .reduce(P.sum, '')
+  }
+}
+

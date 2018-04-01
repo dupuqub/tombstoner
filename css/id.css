@@ -1,0 +1,68 @@
+
+#start, #game, #action
+{
+  width          : 100%;
+  height         : 100%;
+  flex-direction : column;
+}
+
+#title
+{
+  color         : var(--lit);
+  font-weight   : bold;
+  font-size     : calc(var(--u) * 60);
+  margin-bottom : calc(var(--u) * 40);
+}
+
+#header
+{
+  width      : 100%;
+  height     : 10%;
+  background : var(--drk);
+}
+
+#content
+{
+  width  : 100%;
+  height : 90%;
+}
+
+#action_title
+{
+  width       : 100%;
+  height      : 20%;
+  color       : var(--lit);
+  font-weight : bold;
+  font-size   : calc(var(--u) * 30);
+}
+
+#action_content
+{
+  width  : 100%;
+  height : 80%;
+}
+
+#action_text
+{
+  color      : var(--lit);
+  font-size  : calc(var(--u) * 20);
+  text-align : center;
+  border     : calc(var(--u) * 30) solid rgba(0,0,0,0);
+  box-sizing : border-box;
+}
+
+#action_choice_box
+{
+  flex-direction : column;
+}
+
+#action_console
+{
+  color         : var(--mid);
+  font-size     : calc(var(--u) * 20);
+  background    : var(--lit);
+  border        : calc(var(--u) * 10) solid var(--mid);
+  box-sizing    : border-box;
+  border-radius : calc(var(--u) * 20);
+}
+
