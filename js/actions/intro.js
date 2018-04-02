@@ -366,13 +366,7 @@ P.actions.intro =
       {
         title : 'Been there, done that',
         needs : [],
-        clues :
-        [
-          {
-            text  : '',
-            needs : []
-          },
-        ],
+        clues : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[0])

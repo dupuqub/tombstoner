@@ -85,6 +85,7 @@ body
   border-bottom-width        : 0;
   border-bottom-right-radius : 0;
   border-bottom-left-radius  : 0;
+  padding-bottom             : calc(var(--u) * 4)
 }
 
 /*....................................................................................................................*/
