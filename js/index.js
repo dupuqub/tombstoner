@@ -11,7 +11,7 @@ onclick = event => P.click(event)
 
 P.create = () =>
 {
-  P.dom.game.style.display = "none"
+  P.hide(P.dom.game)
 
   P.resize()
   P.update()

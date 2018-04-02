@@ -10,6 +10,7 @@ P.actions.intro =
   () => ({
     title   : 'Welcome to the Blackstone Organization!',
     text    : 'We are glad you decided to join us in our mission to connect the universe.<br><br>Shall we begin?',
+    arrival : () => {},
     choices :
     [
       {
@@ -38,6 +39,7 @@ P.actions.intro =
   () => ({
     title   : 'It\'s complicated...',
     text    : 'Your body died, but your brain was preserved for science, isn\'t that awesome?',
+    arrival : () => {},
     choices :
     [
       {
@@ -66,6 +68,7 @@ P.actions.intro =
   () => ({
     title   : 'You get be a star pilot!',
     text    : 'An offical fleet ship will be assigned to your command.<br><br>You\'ll assemble your own crew and travel around the universe installing the great Blackstones.',
+    arrival : () => {},
     choices :
     [
       {
@@ -94,6 +97,7 @@ P.actions.intro =
   () => ({
     title   : 'They\'re very, very, VERY good antennas',
     text    : 'The very best form of interstellar communication available in the market right now.<br><br>We consider ourselves to be a giant family and wish you\'d feel the same some day.',
+    arrival : () => {},
     choices :
     [
       {
@@ -122,6 +126,7 @@ P.actions.intro =
   () => ({
     title   : 'We signed a contract',
     text    : 'We\'re an open-source and non-for-profit organization aiming to connect different life forms across the universe.<br><br>You donate your brain to us, thanks!',
+    arrival : () => {},
     choices :
     [
       {
@@ -150,6 +155,7 @@ P.actions.intro =
   () => ({
     title   : 'We cannot say',
     text    : 'It\'s agreed upon that knowing such matters are detrimental to the mission at hand, which is bigger than all of us.',
+    arrival : () => {},
     choices :
     [
       {
@@ -178,6 +184,7 @@ P.actions.intro =
   () => ({
     title   : 'Not at all',
     text    : 'The universe is at a critical stage where everything we know is compromised.<br><br>We must suffer now so that life (as we know it) survives the future.<br><br> Shall we head to your ship?',
+    arrival : () => {},
     choices :
     [
       {
@@ -205,7 +212,8 @@ P.actions.intro =
   // 7
   () => ({
     title   : 'Not a problem!',
-    text    : 'Enginneers took great care in making a very friendly user interface.<br><br>Me :)))<br><br>Your job is mainly telling me what you feel you should do and I take care of technicalities.',
+    text    : 'Enginneers took great care in making a very friendly user interface.<br><br>Me :)))<br><br>Navi, the navigator. Your job is telling me what to do, mine is knowing how to do it.',
+    arrival : () => {},
     choices :
     [
       {
@@ -234,6 +242,7 @@ P.actions.intro =
   () => ({
     title   : 'You are more amazing than you know',
     text    : 'Your brain has many of the tools needed for interstellar relations and communications.<br><br>Things I lack.<br><br>We are both very essential parts of it.',
+    arrival : () => {},
     choices :
     [
       {
@@ -253,6 +262,7 @@ P.actions.intro =
   () => ({
     title   : 'Choose your ship',
     text    : 'You may choose 1 of 3 unique starter ships from the Blackstone Corporation!<br><br>It will be your new body and a new home for your future crew.',
+    arrival : () => {},
     choices :
     [
       {
@@ -260,10 +270,10 @@ P.actions.intro =
         needs : [],
         clues :
         [
-          {
-            text  : 'Crew limit = 1<br>Mod limit = 8<br><br>Shield = 1<br>Core = 1<br><br>Beam = 1<br>Engine = 1',
-            needs : []
-          },
+          {text : 'Crew limit = 1<br>Starting crew = 1', needs : []},
+          {text : 'Mod limit = 8<br>Starting mods = 4', needs : []},
+          {text : 'Shield = 1<br>Core = 1', needs : []},
+          {text : 'Beam = 1<br>Engine = 1', needs : []},
         ],
         outcome : () =>
         {
@@ -287,10 +297,10 @@ P.actions.intro =
         needs : [],
         clues :
         [
-          {
-            text  : 'Crew limit = 3<br>Mod limit = 4<br><br>Shield = 3<br>Core = 1<br><br>Beam = 3<br>Engine = 3',
-            needs : []
-          },
+          {text : 'Crew limit = 3<br>Starting crew = 1', needs : []},
+          {text : 'Mod limit = 4<br>Starting mods = 2', needs : []},
+          {text : 'Shield = 3<br>Core = 1', needs : []},
+          {text : 'Beam = 3<br>Engine = 3', needs : []},
         ],
         outcome : () =>
         {
@@ -314,10 +324,10 @@ P.actions.intro =
         needs : [],
         clues :
         [
-          {
-            text  : 'Crew limit = 5<br>Mod limit = 1<br><br>Shield = 5<br>Core = 1<br><br>Beam = 5<br>Engine = 5',
-            needs : []
-          },
+          {text : 'Crew limit = 5<br>Starting crew = 1', needs : []},
+          {text : 'Mod limit = 1<br>Starting mods = 0', needs : []},
+          {text : 'Shield = 5<br>Core = 1', needs : []},
+          {text : 'Beam = 5<br>Engine = 5', needs : []},
         ],
         outcome : () =>
         {
@@ -343,11 +353,18 @@ P.actions.intro =
   // 10
   () => ({
     title   : 'Congratulations!',
-    text    : 'You chose ' + P.state.ship.title + '.<br><br>I hope your choice reaches your expectations',
+    text    : 'You chose ' + P.state.ship.title + '.<br><br>You can always check your current condition by clicking the new "STATUS" tab above.<br><br>You can always get back here through the "NAVI" tab.',
+    arrival : () =>
+    {
+      P.show(P.dom.header_navi)
+      P.show(P.dom.header_status)
+
+      P.update_tab('navi')
+    },
     choices :
     [
       {
-        title : '',
+        title : 'Been there, done that',
         needs : [],
         clues :
         [
@@ -369,6 +386,7 @@ P.actions.intro =
   () => ({
     title   : '',
     text    : '',
+    arrival : () => {},
     choices :
     [
       {
