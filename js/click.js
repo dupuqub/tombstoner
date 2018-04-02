@@ -7,7 +7,12 @@ P.click = event =>
 {
   if(event.target.id.slice(0, -2) === 'action_choice')
   {
-    P.state.action.choices[event.target.id.slice(-1)].outcome()
+    const
+    action = P.state.action(),
+    index  = event.target.id.slice(-1),
+    choice = action.choices[index]
+
+    choice.outcome()
   }
 
   else if(event.target.id === 'new')

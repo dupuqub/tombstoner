@@ -11,7 +11,8 @@ P.mouse_move = event =>
   {
     const
     index_number = Number(event.target.id.slice(-1)),
-    choice       = P.state.action.choices[index_number]
+    action       = P.state.action(),
+    choice       = action.choices[index_number]
 
     P.dom.action_console.innerHTML = choice.clues
       .filter(P.have_all_needs)

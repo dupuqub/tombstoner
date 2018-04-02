@@ -7,6 +7,8 @@ P.load_action = action =>
 {
   P.state.action = action
 
+  action = action()
+
   P.dom.action_title.innerHTML = action.title
   P.dom.action_text.innerHTML = action.text
   P.dom.action_console.innerHTML = ''

@@ -11,5 +11,5 @@ P.run     = funktion => funktion()
 
 P.have_all_needs = item => ! item.needs.length ? true : item.needs.map(P.run).reduce(P.sum, 0) === item.needs.length
 P.write_choice   = (choice, index) => '<div id="action_choice_' + index + '" class="action_choice button center">' + choice.title + '</div>'
-P.write_clue     = info => info.text + '<br><br>'
+P.write_clue     = (info, index, array) => info.text + (index === P.last_in(array) ? '' : '<br><br>')
 

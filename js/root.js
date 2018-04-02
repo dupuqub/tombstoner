@@ -34,7 +34,7 @@ P.info =
 
   wiki :
   [
-    ['Crew limit', 'Crew members (non-passengers) you may have onboard.'],
+    ['Crew limit', 'Crew members (non-passengers) you may have onboard simultaneously.'],
     ['Mod limit', 'Modifications you may have installed simultaneously.'],
     ['Shield', 'Hits you may take before taking hits to the core.'],
     ['Core', 'Hits you may take before you are destroyed'],
@@ -50,7 +50,7 @@ P.info =
 P.state =
 {
   action : null,
-  ship   : {},
+  ship   : null,
   crew   : [],
 }
 
