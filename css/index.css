@@ -29,8 +29,8 @@ body
 
 .start_button
 {
-  width     : 40%;
-  height    : 10%;
+  width     : 100%;
+  height    : 30%;
   font-size : calc(var(--u) * 30);
 }
 
@@ -38,7 +38,6 @@ body
 {
   color         : var(--lit);
   background    : var(--drk);
-  margin-bottom : calc(var(--u) * 5);
   border-radius : calc(var(--u) * 10);
   transition    : border-radius 0.5s, background 0.5s;
   cursor        : pointer;
@@ -46,6 +45,8 @@ body
 
 .button:hover
 {
+  border        : calc(var(--u) * 2) solid var(--mid);
+  box-shadow    : 0 0 0 calc(var(--u) * 2) var(--mid) inset;
   border-radius : 0;
   background    : #400;
 }

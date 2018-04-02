@@ -31,6 +31,18 @@ P.info =
 
   vowels     : ['i','e','é','a','á','o','ó','u'],
   consonants : ['f','s','x','g','d','b','h','y','m','n','r','l','v','z','j','k','t','p'],
+
+  wiki :
+  [
+    ['Crew limit', 'Crew members (non-passengers) you may have onboard.'],
+    ['Mod limit', 'Modifications you may have installed simultaneously.'],
+    ['Shield', 'Hits you may take before taking hits to the core.'],
+    ['Core', 'Hits you may take before you are destroyed'],
+    ['Beam', 'How much you strike'],
+    ['Engine', 'How much you dodge'],
+
+    ['', ''],
+  ]
 }
 
 //......................................................................................................................

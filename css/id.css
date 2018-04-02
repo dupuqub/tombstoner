@@ -8,10 +8,19 @@
 
 #title
 {
+  height        : 20%;
   color         : var(--lit);
   font-weight   : bold;
   font-size     : calc(var(--u) * 60);
   margin-bottom : calc(var(--u) * 40);
+  align-items   : flex-end;
+}
+
+#start_button_box
+{
+  width          : calc(100% / 3);
+  height         : 40%;
+  flex-direction : column;
 }
 
 #header

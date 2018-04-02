@@ -15,7 +15,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -24,7 +24,7 @@ P.actions.intro =
       {
         title   : 'Where\'s my body?!',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[1])
@@ -43,7 +43,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -52,7 +52,7 @@ P.actions.intro =
       {
         title   : 'What the fuck?!',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[2])
@@ -71,7 +71,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -80,7 +80,7 @@ P.actions.intro =
       {
         title   : 'What is a Blackstone?',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[3])
@@ -99,7 +99,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -108,7 +108,7 @@ P.actions.intro =
       {
         title   : 'Why me?',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[4])
@@ -127,7 +127,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -136,7 +136,7 @@ P.actions.intro =
       {
         title   : 'Where\'s my family?',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[5])
@@ -155,7 +155,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -164,7 +164,7 @@ P.actions.intro =
       {
         title   : 'Antennas over family?',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[6])
@@ -183,7 +183,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -192,7 +192,7 @@ P.actions.intro =
       {
         title   : 'I\'m not a pilot',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[7])
@@ -211,7 +211,7 @@ P.actions.intro =
       {
         title   : 'Let\'s do this',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -220,7 +220,7 @@ P.actions.intro =
       {
         title   : 'Sounds like a stretch',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[8])
@@ -239,7 +239,7 @@ P.actions.intro =
       {
         title   : 'Ok... I\'m ready',
         needs   : [],
-        info    : [],
+        clues   : [],
         outcome : () =>
         {
           P.load_action(P.actions.intro[9])
@@ -252,16 +252,16 @@ P.actions.intro =
   // 9
   {
     title   : 'Choose your ship',
-    text    : 'You may choose 1 of 3 unique starter ships from the Blackstone Corporation!<br><br>It\'s your new body.',
+    text    : 'You may choose 1 of 3 unique starter ships from the Blackstone Corporation!<br><br>It will be your new body and a new home for your future crew.',
     choices :
     [
       {
         title : 'Ghost',
         needs : [],
-        info  :
+        clues :
         [
           {
-            text  : 'Crew limit = 0<br>Mod limit = 5<br>Shield = 3',
+            text  : 'Crew limit = 1<br>Mod limit = 8<br><br>Shield = 1<br>Core = 1<br><br>Beam = 1<br>Engine = 1',
             needs : []
           },
         ],
@@ -271,12 +271,12 @@ P.actions.intro =
         }
       },
       {
-        title   : 'Argus',
-        needs   : [],
-        info    :
+        title : 'Argus',
+        needs : [],
+        clues :
         [
           {
-            text  : 'Crew limit = 2<br>Mod limit = 2<br>Shield = 5',
+            text  : 'Crew limit = 3<br>Mod limit = 4<br><br>Shield = 3<br>Core = 1<br><br>Beam = 3<br>Engine = 3',
             needs : []
           },
         ],
@@ -288,10 +288,10 @@ P.actions.intro =
       {
         title : 'Mothor',
         needs : [],
-        info  :
+        clues :
         [
           {
-            text  : 'Crew limit = 3<br>Mod limit = 0<br>Shield = 7',
+            text  : 'Crew limit = 5<br>Mod limit = 1<br><br>Shield = 5<br>Core = 1<br><br>Beam = 5<br>Engine = 5',
             needs : [],
           },
         ],

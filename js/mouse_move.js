@@ -13,9 +13,9 @@ P.mouse_move = event =>
     index_number = Number(event.target.id.slice(-1)),
     choice       = P.state.action.choices[index_number]
 
-    P.dom.action_console.innerHTML = choice.info
+    P.dom.action_console.innerHTML = choice.clues
       .filter(P.have_all_needs)
-      .map   (P.write_info)
+      .map   (P.write_clue)
       .reduce(P.sum, '')
   }
 }
