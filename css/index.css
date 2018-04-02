@@ -38,7 +38,7 @@ body
 {
   color         : var(--lit);
   background    : var(--drk);
-  border-radius : calc(var(--u) * 10);
+  border-radius : calc(var(--u) * 5);
   transition    : border-radius 0.5s, background 0.5s;
   cursor        : pointer;
 }
@@ -47,7 +47,7 @@ body
 {
   border        : calc(var(--u) * 2) solid var(--mid);
   box-shadow    : 0 0 0 calc(var(--u) * 2) var(--mid) inset;
-  border-radius : 0;
+  border-radius : calc(var(--u) * 20);
   background    : #400;
 }
 

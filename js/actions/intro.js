@@ -204,8 +204,8 @@ P.actions.intro =
   //....................................................................................................................
   // 7
   () => ({
-    title   : 'That is not a problem!',
-    text    : 'The enginneers took great care to make a very friendly user interface.<br><br>Me :)))<br><br>Your job is mainly telling me what you feel you should do and I take care of technicalities.',
+    title   : 'Not a problem!',
+    text    : 'Enginneers took great care in making a very friendly user interface.<br><br>Me :)))<br><br>Your job is mainly telling me what you feel you should do and I take care of technicalities.',
     choices :
     [
       {
