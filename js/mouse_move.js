@@ -11,7 +11,7 @@ P.mouse_move = event =>
   {
     const
     index_number = Number(event.target.id.slice(-1)),
-    action       = P.state.action(),
+    action       = P.state.current_action(),
     choice       = action.choices[index_number]
 
     P.dom.navi_console.innerHTML = choice.clues

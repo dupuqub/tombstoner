@@ -76,16 +76,21 @@ body
 
 .header_button:hover
 {
-  background : var(--red);
+  background : var(--mid);
+}
+
+.header_button:active
+{
+  background : #FFF;
 }
 
 .selected_header_button
 {
   background                 : var(--red);
+  padding-bottom             : calc(var(--u) * 4);
   border-bottom-width        : 0;
-  border-bottom-right-radius : 0;
   border-bottom-left-radius  : 0;
-  padding-bottom             : calc(var(--u) * 4)
+  border-bottom-right-radius : 0;
 }
 
 /*....................................................................................................................*/

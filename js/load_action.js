@@ -3,9 +3,10 @@
 
 //......................................................................................................................
 
-P.load_action = action =>
+P.load_action = (action, type) =>
 {
-  P.state.action = action
+  P.state[type + '_action'] = action
+  P.state.current_action = action
 
   action = action()
 

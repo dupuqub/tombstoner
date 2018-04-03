@@ -6,6 +6,7 @@
 const P = // The full project is contained here
 {
   actions : {},
+  updates : {},
 }
 
 //......................................................................................................................
@@ -61,8 +62,11 @@ P.info =
 P.state =
 {
   tab    : null,
-  action : null,
   ship   : null,
   crew   : [],
+
+  navi_action    : null,
+  status_action  : null,
+  current_action : null,
 }
 

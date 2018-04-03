@@ -13,6 +13,8 @@ P.create = () =>
 {
   P.hide(P.dom.game)
 
+  P.updates.tab('navi')
+
   P.resize()
   P.update()
 }
