@@ -10,8 +10,14 @@ P.actions.status =
 
   () => (
   {
-    title   : P.state.ship.title,
-    text    : '',
+    title : P.state.ship.title,
+    text  :
+        'Crew = ' + P.state.crew.length + '/' + P.state.ship.crew_limit + '<br>'
+      + 'Mods = ' + P.state.ship.mods.length + '/' + P.state.ship.mod_limit + '<br><br>'
+      + 'Shield = ' + P.state.ship.shield.now + '/' + P.state.ship.shield.max + '<br>'
+      + 'Core = ' + P.state.ship.core.now + '/' + P.state.ship.core.max + '<br><br>'
+      + 'Beam = ' + P.state.ship.beam + '<br>'
+      + 'Engine = ' + P.state.ship.engine,
     arrival : () => {},
     choices :
     [

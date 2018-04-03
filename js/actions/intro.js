@@ -286,7 +286,7 @@ P.actions.intro =
     choices :
     [
       {
-        title : 'Ghost',
+        title : 'Ghost (edgy)',
         needs : [],
         clues :
         [
@@ -313,7 +313,7 @@ P.actions.intro =
         }
       },
       {
-        title : 'Argus',
+        title : 'Argus (classic)',
         needs : [],
         clues :
         [
@@ -340,7 +340,7 @@ P.actions.intro =
         }
       },
       {
-        title : 'Mothor',
+        title : 'Mothor (safe)',
         needs : [],
         clues :
         [
