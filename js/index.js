@@ -3,32 +3,30 @@
 
 //......................................................................................................................
 
-onresize = event => P.resize(event)
-onmousemove = event => P.mouse_move(event)
-onclick = event => P.click(event)
+onresize    = event => P.resize(event)
+onclick     = event => P.click(event)
+onmousemove = event => P.hover(event)
 
 //......................................................................................................................
 
-P.create = () =>
+P.start = () =>
 {
-  P.hide(P.dom.game)
-
-  P.updates.tab('navi')
+  P.updates.layout(P.layouts.main)
 
   P.resize()
-  P.update()
+  P.loop()
 }
 
 //......................................................................................................................
 
-P.update = () =>
+P.loop = () =>
 {
   // code
 
-  window.requestAnimationFrame(P.update)
+  window.requestAnimationFrame(P.loop)
 }
 
 //......................................................................................................................
 
-P.create()
+P.start()
 

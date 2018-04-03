@@ -3,8 +3,10 @@
 
 //......................................................................................................................
 
-P.click = event =>
+P.updates.layout = myDomObjectGenerator =>
 {
-  const target = event.target
+  P.state.layout = myDomObjectGenerator()
+
+  P.dom.screen.innerHTML = P.render(P.state.layout)
 }
 

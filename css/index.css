@@ -1,110 +1,35 @@
 
 html
 {
-  width      : 100%;
-  height     : 100%;
-  background : #000;
+  width      : 100% ;
+  height     : 100% ;
+  background : #000 ;
 }
 
 body
 {
-  width            : var(--w);
-  height           : var(--h);
-  background       : var(--mid);
-  cursor           : default;
-  font-family      : sans;
-  margin           : 0;
-  user-select      : none;
-  -moz-user-select : none;
+  width            : var(--w) ;
+  height           : var(--h) ;
+  margin           : 0        ;
+  font-family      : sans     ;
+  cursor           : default  ;
+  user-select      : none     ;
+  -moz-user-select : none     ;
 }
 
 /*....................................................................................................................*/
 
 .center
 {
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
+  display         : flex   ;
+  align-items     : center ;
+  justify-content : center ;
 }
 
-/*....................................................................................................................*/
-
-.start_button
+.layout
 {
-  width     : 100%;
-  height    : 30%;
-  font-size : calc(var(--u) * 30);
-}
-
-/*....................................................................................................................*/
-
-.button
-{
-  color         : var(--lit);
-  background    : var(--drk);
-  border-color  : var(--lit);
-  border-radius : calc(var(--u) * 5);
-  transition    : all 0.5s;
-  cursor        : pointer;
-}
-
-.button:hover
-{
-  border        : calc(var(--u) * 4) solid var(--mid);
-  border-radius : calc(var(--u) * 20);
-  box-sizing    : border-box;
-  background    : var(--red);
-}
-
-/*....................................................................................................................*/
-
-.header_button
-{
-  width         : 10%;
-  height        : 100%;
-  background    : var(--drk);
-  color         : var(--lit);
-  border-radius : calc(var(--u) * 20);
-  font-size     : calc(var(--u) * 15);
-  border        : calc(var(--u) * 4) solid var(--drk);
-  box-sizing    : border-box;
-  cursor        : pointer;
-  float         : right;
-  transition    : background 0.5s, border-radius 0.5s;
-  display       : none;
-}
-
-.header_button:hover
-{
-  background : var(--mid);
-}
-
-.header_button:active
-{
-  background : #FFF;
-}
-
-.selected_header_button
-{
-  background                 : var(--red);
-  padding-bottom             : calc(var(--u) * 4);
-  border-bottom-width        : 0;
-  border-bottom-left-radius  : 0;
-  border-bottom-right-radius : 0;
-}
-
-/*....................................................................................................................*/
-
-.navi_section
-{
-  width  : calc(100% / 3);
-  height : 100%;
-}
-
-.navi_choice
-{
-  width     : 100%;
-  height    : 15%;
-  font-size : calc(var(--u) * 20);
+  width      : 100%       ;
+  height     : 100%       ;
+  background : var(--mid) ;
 }
 
