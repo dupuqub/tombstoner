@@ -19,10 +19,12 @@ body
 
 /*....................................................................................................................*/
 
-.column{ flex-direction : column }
-.row{ flex-direction : row }
-.box{ box-sizing : border-box }
-.button{ cursor : pointer }
+.column{ flex-direction : column     }
+.row   { flex-direction : row        }
+.box   { box-sizing     : border-box }
+.button{ cursor         : pointer    }
+
+/*....................................................................................................................*/
 
 .center
 {
