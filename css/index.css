@@ -47,7 +47,7 @@ body
   border-width  : calc(var(--u) * 3)  ;
   border-style  : solid               ;
   border-color  : var(--mid)          ;
-  border-radius : calc(var(--u) * 10) ;
+  border-radius : calc(var(--u) * 5) ;
   transition    : all 0.5s            ;
 }
 
@@ -55,6 +55,6 @@ body
 {
   background    : var(--red)         ;
   border-width  : 0                  ;
-  border-radius : calc(var(--u) * 5) ;
+  border-radius : calc(var(--u) * 10) ;
 }
 
