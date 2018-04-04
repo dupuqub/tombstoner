@@ -5,7 +5,7 @@
 
 P.dice   = (min , max) => Math.floor(Math.random() * (max - min + 1)) + min
 P.sum    = (a , b)     => a + b
-P.space  = (a , b)     => a + ' ' + b
+P.skip   = (a , b)     => a + ' ' + b
 P.lastIn = array       => array.length - 1
 P.array  = length      => Array.from({length})
 P.hide   = domObject   => domObject.style.display = 'none'
