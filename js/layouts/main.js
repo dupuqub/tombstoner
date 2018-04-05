@@ -23,17 +23,17 @@ P.layouts.main = () =>
         [
           {
             id      : 'new' ,
-            classes : ['mainButton' , 'center' , 'box' , 'button'] ,
+            classes : ['mainButton' , 'center' , 'box' , 'button' , 'pointer'] ,
             content : ['NEW']
           } ,
           {
             id      : 'load' ,
-            classes : ['mainButton' , 'center' , 'box' , 'button'] ,
+            classes : ['mainButton' , 'center' , 'box' , 'button' , 'pointer'] ,
             content : ['LOAD']
           } ,
           {
             id      : 'options' ,
-            classes : ['mainButton' , 'center' , 'box' , 'button'] ,
+            classes : ['mainButton' , 'center' , 'box' , 'button' , 'pointer'] ,
             content : ['OPTIONS']
           } ,
         ]

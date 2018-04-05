@@ -3,18 +3,23 @@
 
 //......................................................................................................................
 
-P.layouts.template = () =>
+P.layouts.ship = () =>
 {
   const layout =
   {
-    id      : 'template' ,
-    classes : ['layout' , 'center'] ,
+    id      : 'ship' ,
+    classes : ['layout' , 'center' , 'column'] ,
     content :
     [
       {
-        id      : '' ,
+        id      : 'shipHeader' ,
         classes : [] ,
         content : []
+      } ,
+      {
+        id      : 'shipContent' ,
+        classes : [] ,
+        content : [P.layouts[P.state.shipContentLayout]()]
       } ,
     ]
   }
