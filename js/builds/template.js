@@ -3,9 +3,9 @@
 
 //......................................................................................................................
 
-P.layouts.template = () =>
+P.builds.template = () =>
 {
-  const layout =
+  const myDomObject =
   {
     id      : 'template' ,
     classes : ['layout' , 'center'] ,
@@ -19,6 +19,6 @@ P.layouts.template = () =>
     ]
   }
 
-  return layout
+  return myDomObject
 }
 

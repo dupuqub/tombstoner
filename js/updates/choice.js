@@ -3,10 +3,8 @@
 
 //......................................................................................................................
 
-P.updates.choice = (choiceCreator , save) =>
+P.updates.choice = (choice , save) =>
 {
-  const choice = choiceCreator()
-
   if(save) P.state.choice = choice
 
   P.dom.naviTitle().innerHTML = choice.title

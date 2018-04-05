@@ -5,8 +5,8 @@
 
 const P = // project
 {
+  builds  : {} ,
   choices : {} ,
-  layouts : {} ,
   updates : {} ,
 }
 
@@ -34,9 +34,8 @@ P.info =
 
 P.state =
 {
-  layout            : null ,
-  choice            : null ,
-  ship              : null ,
-  shipContentLayout : 'navi' ,
+  ship   : {} , // shipObject (ship's general information)
+  screen : {} , // myDomObject (preserves screen)
+  choice : {} , // choiceObject (preserves narrative by freeing the choice mechanic from the screen's state)
 }
 

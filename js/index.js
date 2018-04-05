@@ -11,9 +11,10 @@ onmousemove = event => P.hover(event)
 
 P.start = () =>
 {
-  P.updates.layout(P.layouts.main)
-
   P.resize()
+
+  P.updates.build(P.builds.main() , 'screen')
+
   P.loop()
 }
 
