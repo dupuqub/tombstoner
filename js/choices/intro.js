@@ -10,7 +10,7 @@ P.choices.intro =
 
   () =>
   {
-    const choice =
+    const choiceObject =
     {
       title   : 'Welcome to the Blackstone Foundation!' ,
       text    : 'We\'re glad you decided to join us in our mission to connect the universe.<br><br>Shall we begin?' ,
@@ -21,7 +21,7 @@ P.choices.intro =
       ]
     }
 
-    return choice
+    return choiceObject
   } ,
 
   //....................................................................................................................
@@ -29,7 +29,7 @@ P.choices.intro =
 
   () =>
   {
-    const choice =
+    const choiceObject =
     {
       title   : 'It\'s complicated...' ,
       text    : 'Your body died, but you donated your brain to science.<br><br>Isn\'t it awesome?' ,
@@ -40,7 +40,7 @@ P.choices.intro =
       ]
     }
 
-    return choice
+    return choiceObject
   } ,
 
   //....................................................................................................................
@@ -48,7 +48,7 @@ P.choices.intro =
 
   () =>
   {
-    const choice =
+    const choiceObject =
     {
       title   : '' ,
       text    : '' ,
@@ -72,7 +72,7 @@ P.choices.intro =
       ]
     }
 
-    return choice
+    return choiceObject
   } ,
 ]
 

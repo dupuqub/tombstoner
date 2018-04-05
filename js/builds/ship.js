@@ -3,7 +3,7 @@
 
 //......................................................................................................................
 
-P.builds.ship = layout =>
+P.builds.ship = () =>
 {
   const myDomObject =
   {
@@ -15,13 +15,13 @@ P.builds.ship = layout =>
         id      : 'shipHeader' ,
         content :
         [
-          {id : 'shipHeaderStatusButton' , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['']} ,
-          {id : 'shipHeaderNaviButton'   , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['']} ,
+          {id : 'shipHeaderStatus' , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['STATUS']} ,
+          {id : 'shipHeaderNavi'   , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['NAVI']} ,
         ]
       } ,
       {
         id      : 'shipContent' ,
-        content : [P.builds[layout]()]
+        content : [P.builds[P.info.shipTab]()]
       } ,
     ]
   }
