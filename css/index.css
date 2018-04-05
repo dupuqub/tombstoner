@@ -19,10 +19,10 @@ body
 
 /*....................................................................................................................*/
 
-.column{ flex-direction : column     }
-.row   { flex-direction : row        }
-.box   { box-sizing     : border-box }
-.button{ cursor         : pointer    }
+.column { flex-direction : column     }
+.row    { flex-direction : row        }
+.box    { box-sizing     : border-box }
+.pointer{ cursor         : pointer    }
 
 /*....................................................................................................................*/
 
@@ -40,24 +40,47 @@ body
   background : var(--mid) ;
 }
 
-.mainButton
+/*....................................................................................................................*/
+
+.button
 {
-  width         : 25%                 ;
-  height        : 30%                 ;
-  background    : var(--drk)          ;
-  color         : var(--lit)          ;
-  font-size     : calc(var(--u) * 25) ;
-  border-width  : calc(var(--u) * 3)  ;
-  border-style  : solid               ;
-  border-color  : var(--mid)          ;
-  border-radius : calc(var(--u) * 5)  ;
-  transition    : all 0.5s            ;
+  background    : var(--drk)         ;
+  color         : var(--lit)         ;
+  border-width  : calc(var(--u) * 3) ;
+  border-style  : solid              ;
+  border-color  : var(--mid)         ;
+  border-radius : calc(var(--u) * 5) ;
+  transition    : all 0.5s           ;
 }
 
-.mainButton:hover
+.button:hover
 {
   background    : var(--red)          ;
   border-width  : 0                   ;
   border-radius : calc(var(--u) * 10) ;
+}
+
+/*....................................................................................................................*/
+
+.mainButton
+{
+  width     : 25%                 ;
+  height    : 30%                 ;
+  font-size : calc(var(--u) * 25) ;
+}
+
+/*....................................................................................................................*/
+
+.naviContentSection
+{
+  width  : calc(100% / 3) ;
+  height : 100%           ;
+}
+
+.naviButton
+{
+  width     : 100%                ;
+  height    : 15%                 ;
+  font-size : calc(var(--u) * 20) ;
 }
 

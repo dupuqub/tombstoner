@@ -5,6 +5,8 @@
   height : 100% ;
 }
 
+/*....................................................................................................................*/
+
 #mainTitle
 {
   width      : 100%                ;
@@ -18,5 +20,55 @@
 {
   width  : 100% ;
   height : 40%  ;
+}
+
+/*....................................................................................................................*/
+
+#shipHeader
+{
+  width      : 100%       ;
+  height     : 8%         ;
+  background : var(--drk) ;
+}
+
+#shipContent
+{
+  width      : 100% ;
+  height     : 92%  ;
+}
+
+/*....................................................................................................................*/
+
+#naviTitle
+{
+  width       : 100%                ;
+  height      : 15%                 ;
+  background  : var(--red)          ;
+  color       : var(--lit)          ;
+  font-size   : calc(var(--u) * 30) ;
+}
+
+#naviContent
+{
+  width  : 100% ;
+  height : 85%  ;
+}
+
+#naviText
+{
+  color      : var(--lit)                           ;
+  text-align : center                               ;
+  font-size  : calc(var(--u) * 20)                  ;
+  border     : calc(var(--u) * 30) solid var(--mid) ;
+}
+
+#naviConsole
+{
+  color         : var(--mid)                           ;
+  background    : var(--lit)                           ;
+  font-size     : calc(var(--u) * 20)                  ;
+  border        : calc(var(--u) * 10) solid var(--mid) ;
+  border-radius : calc(var(--u) * 20)                  ;
+  padding       : calc(var(--u) * 20)                  ;
 }
 
