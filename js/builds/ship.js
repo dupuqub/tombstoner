@@ -5,7 +5,7 @@
 
 P.builds.ship = () =>
 {
-  const myDomObject =
+  const myDom =
   {
     id      : 'ship' ,
     classes : ['layout' , 'center' , 'column'] ,
@@ -26,6 +26,6 @@ P.builds.ship = () =>
     ]
   }
 
-  return myDomObject
+  return myDom
 }
 

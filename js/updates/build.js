@@ -3,10 +3,10 @@
 
 //......................................................................................................................
 
-P.updates.build = (myDomObject , container , save) =>
+P.updates.build = (myDom , container , save) =>
 {
-  if(save) P.state[container] = myDomObject
+  container.innerHTML = P.render(myDom)
 
-  P.dom[container]().innerHTML = P.render(P.state[container])
+  if(save) P.state[container] = myDom
 }
 

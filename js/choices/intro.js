@@ -10,18 +10,18 @@ P.choices.intro =
 
   () =>
   {
-    const choiceObject =
+    const choice =
     {
       title   : 'Welcome to the Blackstone Foundation!' ,
       text    : 'We\'re glad you decided to join us in our mission to connect the universe.<br><br>Shall we begin?' ,
-      choices :
+      options :
       [
-        {title : 'Let\'s do this'     , outcome : () => P.updates.choice(P.choices.intro[0] , true)} ,
-        {title : 'Where\'s my body?!' , outcome : () => P.updates.choice(P.choices.intro[1] , true)} ,
+        {title : 'Let\'s do this'     , outcome : () => P.updates.navi(P.choices.intro[0]() , true , true)} ,
+        {title : 'Where\'s my body?!' , outcome : () => P.updates.navi(P.choices.intro[1]() , true , true)} ,
       ]
     }
 
-    return choiceObject
+    return choice
   } ,
 
   //....................................................................................................................
@@ -29,18 +29,18 @@ P.choices.intro =
 
   () =>
   {
-    const choiceObject =
+    const choice =
     {
       title   : 'It\'s complicated...' ,
       text    : 'Your body died, but you donated your brain to science.<br><br>Isn\'t it awesome?' ,
-      choices :
+      options :
       [
-        {title : 'Let\'s do this' , outcome : () => P.updates.choice(P.choices.intro[0] , true)} ,
-        {title : 'What?!'         , outcome : () => P.updates.choice(P.choices.intro[2] , true)} ,
+        {title : 'Let\'s do this' , outcome : () => P.updates.navi(P.choices.intro[0]() , true , true)} ,
+        {title : 'What?!'         , outcome : () => P.updates.navi(P.choices.intro[2]() , true , true)} ,
       ]
     }
 
-    return choiceObject
+    return choice
   } ,
 
   //....................................................................................................................
@@ -48,11 +48,11 @@ P.choices.intro =
 
   () =>
   {
-    const choiceObject =
+    const choice =
     {
       title   : '' ,
       text    : '' ,
-      choices :
+      options :
       [
         {
           title : '' ,
@@ -66,13 +66,13 @@ P.choices.intro =
           ] ,
           outcome : () =>
           {
-            P.updates.choice(P.choices.intro[0] , true)
+            P.updates.navi(P.choices.intro[0]() , true , true)
           }
         } ,
       ]
     }
 
-    return choiceObject
+    return choice
   } ,
 ]
 

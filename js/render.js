@@ -3,18 +3,18 @@
 
 //......................................................................................................................
 
-P.render = myDomObject =>
+P.render = myDom =>
 {
   const text =
 
-    typeof myDomObject === 'string'
-    ? myDomObject
+    typeof myDom === 'string'
+    ? myDom
     :
       '<div'
-      + (myDomObject.id ? ' id="' + myDomObject.id + '"' : '')
-      + (myDomObject.classes && myDomObject.classes.length ? ' class="' + myDomObject.classes.reduce(P.skip) + '"' : '')
+      + (myDom.id ? ' id="' + myDom.id + '"' : '')
+      + (myDom.classes && myDom.classes.length ? ' class="' + myDom.classes.reduce(P.skip) + '"' : '')
       + '>'
-      + (myDomObject.content && myDomObject.content.length ? myDomObject.content.map(P.render).reduce(P.sum) : '')
+      + (myDom.content && myDom.content.length ? myDom.content.map(P.render).reduce(P.sum) : '')
       + '</div>'
 
   return text

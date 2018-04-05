@@ -5,7 +5,7 @@
 
 P.builds.template = () =>
 {
-  const myDomObject =
+  const myDom =
   {
     id      : 'template' ,
     classes : ['layout' , 'center'] ,
@@ -19,6 +19,6 @@ P.builds.template = () =>
     ]
   }
 
-  return myDomObject
+  return myDom
 }
 

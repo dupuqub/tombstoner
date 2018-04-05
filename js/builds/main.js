@@ -5,7 +5,7 @@
 
 P.builds.main = () =>
 {
-  const myDomObject =
+  const myDom =
   {
     id      : 'main' ,
     classes : ['layout' , 'center' , 'column'] ,
@@ -41,6 +41,6 @@ P.builds.main = () =>
     ]
   }
 
-  return myDomObject
+  return myDom
 }
 
