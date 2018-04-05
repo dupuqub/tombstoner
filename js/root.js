@@ -5,15 +5,21 @@
 
 const P = // project
 {
-  updates : {} ,
+  choices : {} ,
   layouts : {} ,
+  updates : {} ,
 }
 
 //......................................................................................................................
 
 P.dom = // document object model
 {
-  screen : document.querySelector('#screen') ,
+  screen : () => document.querySelector('#screen') ,
+
+  naviTitle     : () => document.querySelector('#naviTitle') ,
+  naviText      : () => document.querySelector('#naviText') ,
+  naviButtonBox : () => document.querySelector('#naviButtonBox') ,
+  naviConsole   : () => document.querySelector('#naviConsole') ,
 }
 
 //......................................................................................................................
@@ -28,6 +34,9 @@ P.info =
 
 P.state =
 {
-  layout : null ,
+  layout            : null ,
+  choice            : null ,
+  ship              : null ,
+  shipContentLayout : 'navi' ,
 }
 
