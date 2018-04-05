@@ -3,9 +3,9 @@
 
 //......................................................................................................................
 
-P.updates.build = (myDomObject , container) =>
+P.updates.build = (myDomObject , container , save) =>
 {
-  P.state[container] = myDomObject
+  if(save) P.state[container] = myDomObject
 
   P.dom[container]().innerHTML = P.render(P.state[container])
 }

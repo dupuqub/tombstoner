@@ -11,8 +11,18 @@ P.builds.ship = layout =>
     classes : ['layout' , 'center' , 'column'] ,
     content :
     [
-      {id : 'shipHeader'  , content : []} ,
-      {id : 'shipContent' , content : [P.builds[layout]()]} ,
+      {
+        id      : 'shipHeader' ,
+        content :
+        [
+          {id : 'shipHeaderStatusButton' , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['']} ,
+          {id : 'shipHeaderNaviButton'   , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['']} ,
+        ]
+      } ,
+      {
+        id      : 'shipContent' ,
+        content : [P.builds[layout]()]
+      } ,
     ]
   }
 

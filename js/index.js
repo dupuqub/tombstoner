@@ -13,7 +13,7 @@ P.start = () =>
 {
   P.resize()
 
-  P.updates.build(P.builds.main() , 'screen')
+  P.updates.build(P.builds.main() , 'screen' , true)
 
   P.loop()
 }

@@ -9,7 +9,7 @@ P.click = event =>
 
   if(target === 'new')
   {
-    P.updates.build(P.builds.ship('navi') , 'screen')
+    P.updates.build(P.builds.ship('navi') , 'screen' , true)
 
     P.updates.choice(P.choices.intro[0]() , true)
   }
