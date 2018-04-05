@@ -3,10 +3,10 @@
 
 //......................................................................................................................
 
-P.updates.layout = myDomObjectGenerator =>
+P.updates.layout = myDomObjectCreator =>
 {
-  P.state.layout = myDomObjectGenerator()
+  P.state.layout = myDomObjectCreator()
 
-  P.dom.screen.innerHTML = P.render(P.state.layout)
+  P.dom.screen().innerHTML = P.render(P.state.layout)
 }
 
