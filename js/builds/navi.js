@@ -5,7 +5,9 @@
 
 P.builds.navi = () =>
 {
-  const myDomObject =
+  const
+  choiceObject = P.info.choice ,
+  myDomObject  =
   {
     id      : 'navi' ,
     classes : ['layout' , 'center' , 'column'] ,
@@ -14,7 +16,7 @@ P.builds.navi = () =>
       {
         id      : 'naviTitle' ,
         classes : ['center'] ,
-        content : []
+        content : [choiceObject.title]
       } ,
       {
         id      : 'naviContent' ,
@@ -24,26 +26,16 @@ P.builds.navi = () =>
           {
             id      : 'naviText' ,
             classes : ['naviContentSection' , 'center' , 'box'] ,
-            content :
-            [
-              //
-            ]
+            content : [choiceObject.text]
           } ,
           {
             id      : 'naviButtonBox' ,
             classes : ['naviContentSection' , 'center' , 'column'] ,
-            content :
-            [
-              //
-            ]
+            content : choiceObject.choices.filter(P.needs).map(P.builds.choice)
           } ,
           {
             id      : 'naviConsole' ,
-            classes : ['naviContentSection' , 'center' , 'box'] ,
-            content :
-            [
-              //
-            ]
+            classes : ['naviContentSection' , 'center' , 'box']
           } ,
         ]
       } ,

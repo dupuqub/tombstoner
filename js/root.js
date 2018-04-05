@@ -15,19 +15,16 @@ const P = // project
 P.dom = // document object model
 {
   screen : () => document.querySelector('#screen') ,
-
-  naviTitle     : () => document.querySelector('#naviTitle') ,
-  naviText      : () => document.querySelector('#naviText') ,
-  naviButtonBox : () => document.querySelector('#naviButtonBox') ,
-  naviConsole   : () => document.querySelector('#naviConsole') ,
 }
 
 //......................................................................................................................
 
 P.info =
 {
-  body   : {w : null , h : null} ,
-  aspect : {w : 16 , h : 9} ,
+  body    : {w : 0 , h : 0} ,
+  aspect  : {w : 16 , h : 9} ,
+  shipTab : '' , // 'navi' or 'status'
+  choice  : {} , // choiceObject (this is the temporary choice, but it is also the one that gets rendered)
 }
 
 //......................................................................................................................

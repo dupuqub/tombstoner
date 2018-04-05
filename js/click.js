@@ -9,9 +9,11 @@ P.click = event =>
 
   if(target === 'new')
   {
-    P.updates.build(P.builds.ship('navi') , 'screen' , true)
+    P.info.shipTab = 'navi'
+    P.info.choice = P.choices.intro[0]()
+    P.state.choice = P.choices.intro[0]()
 
-    P.updates.choice(P.choices.intro[0]() , true)
+    P.updates.build(P.builds.ship() , 'screen' , true)
   }
 
   else if(target === '')
