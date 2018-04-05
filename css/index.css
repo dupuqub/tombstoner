@@ -8,13 +8,14 @@ html
 
 body
 {
-  width            : var(--w) ;
-  height           : var(--h) ;
-  margin           : 0        ;
-  font-family      : sans     ;
-  cursor           : default  ;
-  user-select      : none     ;
-  -moz-user-select : none     ;
+  width            : var(--w)   ;
+  height           : var(--h)   ;
+  background       : var(--mid) ;
+  margin           : 0          ;
+  font-family      : sans       ;
+  cursor           : default    ;
+  user-select      : none       ;
+  -moz-user-select : none       ;
 }
 
 /*....................................................................................................................*/
@@ -35,9 +36,8 @@ body
 
 .layout
 {
-  width      : 100%       ;
-  height     : 100%       ;
-  background : var(--mid) ;
+  width  : 100% ;
+  height : 100% ;
 }
 
 /*....................................................................................................................*/
