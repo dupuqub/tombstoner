@@ -7,7 +7,7 @@ P.updates.navi = (choice , render , save) =>
 {
   P.info.choice = choice
 
+  if(render) P.dom('#shipContent').innerHTML = P.render(P.builds.navi())
   if(save) P.state.choice = P.info.choice
-  if(render) P.updates.build(P.builds.navi() , P.dom('#shipContent') , false)
 }
 

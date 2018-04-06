@@ -3,10 +3,10 @@
 
 //......................................................................................................................
 
-P.updates.build = (myDom , container , save) =>
+P.updates.layout = myDom =>
 {
-  container.innerHTML = P.render(myDom)
+  P.dom('#screen').innerHTML = P.render(myDom)
 
-  if(save) P.state[container] = myDom
+  P.state.layout = myDom
 }
 

@@ -14,7 +14,9 @@ P.click = event =>
     P.info.shipTab = 'navi'
 
     P.updates.navi(P.choices.intro[0]() , false , true)
-    P.updates.build(P.builds.ship() , P.dom('#screen') , true)
+    P.updates.layout(P.builds.ship() , P.dom('#screen'))
+
+    P.domAll('.shipHeaderButton').forEach(P.hide)
   }
 
   //....................................................................................................................

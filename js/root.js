@@ -25,7 +25,7 @@ P.info =
 P.state =
 {
   ship   : {} , // shipObject (ship's general information)
-  screen : {} , // myDomObject (preserves screen)
-  choice : {} , // choiceObject (preserves narrative by freeing the choice mechanic from the screen's state)
+  layout : {} , // myDomObject (preserves layout)
+  choice : {} , // choiceObject (preserves narrative by freeing the choice mechanic from the layout's state)
 }
 

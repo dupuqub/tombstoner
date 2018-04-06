@@ -111,10 +111,12 @@ P.choices.intro =
       options :
       [
         {
-          title : 'Start simulation' ,
+          title   : 'Start simulation' ,
           outcome : () =>
           {
-            //
+            // prepare combat
+
+            P.updates.layout(P.builds.combat() , P.dom('#screen'))
           }
         } ,
       ]

@@ -13,7 +13,7 @@ P.start = () =>
 {
   P.resize()
 
-  P.updates.build(P.builds.main() , P.dom('#screen') , true)
+  P.updates.layout(P.builds.main() , P.dom('#screen'))
 
   P.loop()
 }
