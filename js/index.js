@@ -22,7 +22,7 @@ P.start = () =>
 
 P.loop = () =>
 {
-  // code
+  if(P.state.layout.id === 'combat') P.updates.combat()
 
   window.requestAnimationFrame(P.loop)
 }
