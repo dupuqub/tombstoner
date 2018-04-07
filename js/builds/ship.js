@@ -15,8 +15,16 @@ P.builds.ship = () =>
         id      : 'shipHeader' ,
         content :
         [
-          {id : 'shipHeaderStatus' , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['STATUS']} ,
-          {id : 'shipHeaderNavi'   , classes : ['shipHeaderButton' , 'center' , 'box'] , content : ['NAVI']} ,
+          {
+            id      : 'shipHeaderStatus' ,
+            classes : ['shipHeaderButton' , 'center' , 'box'] ,
+            content : ['STATUS']
+          } ,
+          {
+            id      : 'shipHeaderNavi' ,
+            classes : ['shipHeaderButton' , 'center' , 'box'] ,
+            content : ['NAVI']
+          } ,
         ]
       } ,
       {
