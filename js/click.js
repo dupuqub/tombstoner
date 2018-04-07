@@ -25,7 +25,7 @@ P.click = event =>
   {
     const index = Number(target.slice(-1))
 
-    P.info.choice.options[index].outcome()
+    if(Number.isInteger(index)) P.info.choice.options[index].outcome()
   }
 }
 

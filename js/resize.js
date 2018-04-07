@@ -21,6 +21,15 @@ P.resize = event => // "event" is not used below, but it exists
   P.info.body = { w , h }
 
   //....................................................................................................................
+  // adapt canvas if necessary
+
+  if(P.dom('canvas'))
+  {
+    P.dom('canvas').width = w
+    P.dom('canvas').height = h
+  }
+
+  //....................................................................................................................
   // modify CSS
 
   Array.from(document.styleSheets).some(sheet =>
