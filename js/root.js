@@ -15,6 +15,7 @@ const P = // project
 
 P.info =
 {
+  unit    : 0 ,
   body    : {w : 0 , h : 0} ,
   aspect  : {w : 16 , h : 9} ,
   shipTab : '' , // 'navi' or 'status'
@@ -31,7 +32,7 @@ P.state =
   {
     x : 0 ,
     y : 0 ,
-    r : 12 ,
+    r : 5 , // units
   } ,
 }
 

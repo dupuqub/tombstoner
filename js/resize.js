@@ -19,6 +19,7 @@ P.resize = event => // "event" is not used below, but it exists
   // store useful information for fast access
 
   P.info.body = { w , h }
+  P.info.unit = w / 800
 
   //....................................................................................................................
   // adapt canvas if necessary
