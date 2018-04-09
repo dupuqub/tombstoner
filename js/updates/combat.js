@@ -39,8 +39,8 @@ P.updates.combat = () =>
       0 ,
       2000 ,
       2000 ,
-      center - body.w / 2 - ship.x + body.w * col * left,
-      center - body.w / 2 - ship.y + body.w * row * top,
+      center - body.w / 2 - ship.x * u + body.w * col * left,
+      center - body.w / 2 - ship.y * u + body.w * row * top,
       body.w ,
       body.w
     )
@@ -50,7 +50,7 @@ P.updates.combat = () =>
 
   pen.fillStyle = '#FFF'
   pen.beginPath()
-  pen.arc(center , center , ship.r * u , 0 , Math.PI * 2)
+  pen.arc(center , center , ship.radius * u , 0 , Math.PI * 2)
   pen.fill()
 }
 

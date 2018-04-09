@@ -40,11 +40,11 @@ P.loop = () =>
 
   // temporary movement for testing parallax
 
-  if     ( P.keyPool.indexOf('ArrowLeft') !== -1)  P.state.ship.x -= 10
-  else if( P.keyPool.indexOf('ArrowRight') !== -1) P.state.ship.x += 10
+  if     ( P.keyPool.indexOf('ArrowLeft') !== -1)  P.state.ship.x -= P.state.ship.speed
+  else if( P.keyPool.indexOf('ArrowRight') !== -1) P.state.ship.x += P.state.ship.speed
 
-  if     ( P.keyPool.indexOf('ArrowUp') !== -1)   P.state.ship.y -= 10
-  else if( P.keyPool.indexOf('ArrowDown') !== -1) P.state.ship.y += 10
+  if     ( P.keyPool.indexOf('ArrowUp') !== -1)   P.state.ship.y -= P.state.ship.speed
+  else if( P.keyPool.indexOf('ArrowDown') !== -1) P.state.ship.y += P.state.ship.speed
 }
 
 

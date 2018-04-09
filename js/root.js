@@ -31,9 +31,10 @@ P.state =
   choice : null , // choiceObject (preserves narrative by freeing the choice mechanic from the layout's state)
   ship   :
   {
-    x : 0 ,
-    y : 0 ,
-    r : 5 , // units
+    x      : 0 , // units
+    y      : 0 , // units
+    radius : 5 , // units
+    speed  : 5 , // units
   } ,
 }
 
