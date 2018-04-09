@@ -15,10 +15,17 @@ P.builds.combat = () =>
         type       : 'canvas' ,
         attributes :
         [
-          {title : 'width' , value : P.info.body.w} ,
+          {title : 'width' , value : P.info.body.h} ,
           {title : 'height' , value : P.info.body.h} ,
         ] ,
-        content : ['Sorry, your browser does not support <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a>.']
+        content :
+        [
+          [id : 'dust0' , classes : 'dust'] ,
+          [id : 'dust1' , classes : 'dust'] ,
+          [id : 'dust2' , classes : 'dust'] ,
+          [id : 'dust3' , classes : 'dust'] ,
+          'Sorry, your browser does not support<a href="https://goo.gl/QLSgQy">canvas</a>.'
+        ]
       } ,
     ]
   }

@@ -6,14 +6,23 @@
 onresize    = event => P.resize(event)
 onclick     = event => P.click(event)
 onmousemove = event => P.hover(event)
+onkeydown   = event => P.press(event)
+onkeyup     = event => P.release(event)
+
+P.images.dust0 = new Image
+P.images.dust1 = new Image
+P.images.dust2 = new Image
+P.images.dust3 = new Image
 
 //......................................................................................................................
 
 P.start = () =>
 {
+  P.builds.dust()
+
   P.resize()
 
-  P.updates.layout(P.builds.main() , P.dom('#screen'))
+  P.updates.layout(P.builds.combat() , P.dom('#screen'))
 
   P.loop()
 }
@@ -25,7 +34,16 @@ P.loop = () =>
   if(P.state.layout.id === 'combat') P.updates.combat()
 
   window.requestAnimationFrame(P.loop)
+
+  // temporary movement for testing parallax
+
+  if     ( P.keyPool.indexOf('ArrowLeft') !== -1)  P.state.ship.x -= 10
+  else if( P.keyPool.indexOf('ArrowRight') !== -1) P.state.ship.x += 10
+
+  if     ( P.keyPool.indexOf('ArrowUp') !== -1)   P.state.ship.y -= 10
+  else if( P.keyPool.indexOf('ArrowDown') !== -1) P.state.ship.y += 10
 }
+
 
 //......................................................................................................................
 

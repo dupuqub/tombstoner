@@ -3,7 +3,7 @@
 
 //......................................................................................................................
 
-P.roll      = (min , max) => Math.floor(Math.random() * (max - min + 1)) + min
+P.random    = (min , max) => Math.floor(Math.random() * (max - min + 1)) + min
 P.sum       = (a , b)     => a + b
 P.skip      = (a , b)     => a + ' ' + b
 P.lastIn    = array       => array.length - 1

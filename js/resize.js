@@ -25,7 +25,7 @@ P.resize = event => // "event" is not used below, but it exists
 
   if(P.dom('canvas'))
   {
-    P.dom('canvas').width = w
+    P.dom('canvas').width = h
     P.dom('canvas').height = h
   }
 

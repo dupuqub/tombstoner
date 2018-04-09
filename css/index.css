@@ -18,6 +18,12 @@ body
   -moz-user-select : none       ;
 }
 
+canvas
+{
+  border-radius : 50% ;
+  background    : #000 ;
+}
+
 /*....................................................................................................................*/
 
 .column { flex-direction : column     }

@@ -8,6 +8,7 @@ const P = // project
   builds  : {} ,
   choices : {} ,
   updates : {} ,
+  images  : {} ,
 }
 
 //......................................................................................................................
@@ -24,8 +25,13 @@ P.info =
 
 P.state =
 {
-  ship   : {} , // shipObject (ship's general information)
   layout : {} , // myDomObject (preserves layout)
   choice : {} , // choiceObject (preserves narrative by freeing the choice mechanic from the layout's state)
+  ship   :
+  {
+    x : 0 ,
+    y : 0 ,
+    r : 12 ,
+  } ,
 }
 
