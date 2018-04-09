@@ -9,22 +9,25 @@ onmousemove = event => P.hover(event)
 onkeydown   = event => P.press(event)
 onkeyup     = event => P.release(event)
 
-P.images.dust0 = new Image
-P.images.dust1 = new Image
-P.images.dust2 = new Image
-P.images.dust3 = new Image
+//......................................................................................................................
+
+P.prepare = () =>
+{
+  P.images.dust0 = new Image
+  P.images.dust1 = new Image
+  P.images.dust2 = new Image
+  P.images.dust3 = new Image
+
+  P.draws.dust()
+
+  P.resize()
+}
 
 //......................................................................................................................
 
 P.start = () =>
 {
-  P.builds.dust()
-
-  P.resize()
-
   P.updates.layout(P.builds.combat() , P.dom('#screen'))
-
-  P.loop()
 }
 
 //......................................................................................................................
@@ -47,5 +50,7 @@ P.loop = () =>
 
 //......................................................................................................................
 
+P.prepare()
 P.start()
+P.loop()
 
