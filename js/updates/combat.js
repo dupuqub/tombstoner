@@ -6,7 +6,7 @@
 P.updates.combat = () =>
 {
   const
-  center = P.center() ,
+  center = P.info.body.h / 2 ,
   canvas = P.dom('canvas') ,
   pen    = canvas.getContext('2d') ,
   ship   = P.state.ship ,
@@ -28,7 +28,9 @@ P.updates.combat = () =>
     const
     image = P.images.dust2 ,
     row   = index > 5 ? -1 : index > 2 ? 0 : 1 ,
-    col   = index === 0 || index === 3 || index === 6 ? -1 : index === 1 || index === 4 || index === 7 ? 0 : 1
+    col   = index === 0 || index === 3 || index === 6 ? -1 : index === 1 || index === 4 || index === 7 ? 0 : 1 ,
+    left  = 1 ,
+    top   = 1
 
     pen.drawImage(
 
@@ -37,8 +39,8 @@ P.updates.combat = () =>
       0 ,
       2000 ,
       2000 ,
-      center.x - body.w / 2 - ship.x + body.w * col,
-      center.y - body.w / 2 - ship.y + body.w * row,
+      center - body.w / 2 - ship.x + body.w * col * left,
+      center - body.w / 2 - ship.y + body.w * row * top,
       body.w ,
       body.w
     )
@@ -48,7 +50,7 @@ P.updates.combat = () =>
 
   pen.fillStyle = '#FFF'
   pen.beginPath()
-  pen.arc(center.x , center.y , ship.r * u , 0 , Math.PI * 2)
+  pen.arc(center , center , ship.r * u , 0 , Math.PI * 2)
   pen.fill()
 }
 

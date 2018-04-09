@@ -14,8 +14,6 @@ P.dom       = query       => document.querySelector(query)
 P.domAll    = query       => document.querySelectorAll(query)
 P.attribute = attribute   => attribute.title + '="' + attribute.value + '"'
 
-P.center = () => ({x : P.info.body.h / 2 , y : P.info.body.h / 2})
-
 P.needs = item => item.needs && item.needs.length ? item.needs.map(P.run).reduce(P.sum, 0) === item.needs.length : true
 
 P.writeClue = (info , index , array) => info.text + (index === P.last_in(array) ? '' : '<br><br>')
