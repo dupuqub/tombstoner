@@ -21,9 +21,7 @@ P.updates.combat = () =>
   //....................................................................................................................
   // draw dust
 
-  const parallaxArray = [0.30 , 0.35 , 1.00 , 1.20]
-
-  parallaxArray.forEach((parallax , outerIndex) =>
+  P.info.dusts.forEach((dust , outerIndex) =>
   {
     P.array(9).forEach((unused, innerIndex) =>
     {
@@ -31,8 +29,8 @@ P.updates.combat = () =>
       image = P.images['dust' + outerIndex] ,
       row   = innerIndex > 5 ? -1 : innerIndex > 2 ? 0 : 1 ,
       col   = [0,3,6].indexOf(innerIndex) !== -1 ? -1 : [1,4,7].indexOf(innerIndex) !== -1 ? 0 : 1 ,
-      left  = Math.floor(ship.x / 800 * parallax) ,
-      top   = Math.floor(ship.y / 800 * parallax)
+      left  = Math.floor(ship.x / 800 * dust.parallax) ,
+      top   = Math.floor(ship.y / 800 * dust.parallax)
 
       pen.drawImage
       (
@@ -45,8 +43,8 @@ P.updates.combat = () =>
         2000 ,
 
         // destination
-        center - (ship.x * unit * parallax) + (body.w * col) + (800 * unit * left) ,
-        center - (ship.y * unit * parallax) + (body.w * row) + (800 * unit * top) ,
+        center - (ship.x * unit * dust.parallax) + (body.w * col) + (800 * unit * left) ,
+        center - (ship.y * unit * dust.parallax) + (body.w * row) + (800 * unit * top) ,
         body.w ,
         body.w
       )
