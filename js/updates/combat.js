@@ -34,15 +34,19 @@ P.updates.combat = () =>
       left  = Math.floor(ship.x / 800 * parallax) ,
       top   = Math.floor(ship.y / 800 * parallax)
 
-      pen.drawImage(
-
+      pen.drawImage
+      (
         image ,
+
+        // source
         0 ,
         0 ,
         2000 ,
         2000 ,
-        center - (ship.x * unit * parallax ) + (body.w * col) + (800 * unit * left) ,
-        center - (ship.y * unit * parallax ) + (body.w * row) + (800 * unit * top) ,
+
+        // destination
+        center - (ship.x * unit * parallax) + (body.w * col) + (800 * unit * left) ,
+        center - (ship.y * unit * parallax) + (body.w * row) + (800 * unit * top) ,
         body.w ,
         body.w
       )
