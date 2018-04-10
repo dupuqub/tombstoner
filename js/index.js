@@ -27,7 +27,7 @@ P.prepare = () =>
 
 P.start = () =>
 {
-  P.updates.layout(P.builds.combat() , P.dom('#screen'))
+  P.updates.layout(P.builds.main() , P.dom('#screen'))
 }
 
 //......................................................................................................................
