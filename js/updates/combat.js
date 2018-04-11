@@ -26,7 +26,7 @@ P.updates.combat = () =>
     P.array(9).forEach((unused, innerIndex) =>
     {
       const
-      image = P.images['dust' + outerIndex] ,
+      image = P.images.dusts[outerIndex] ,
       row   = innerIndex > 5 ? -1 : innerIndex > 2 ? 0 : 1 ,
       col   = [0,3,6].indexOf(innerIndex) !== -1 ? -1 : [1,4,7].indexOf(innerIndex) !== -1 ? 0 : 1 ,
       left  = Math.floor(ship.x / 800 * dust.parallax) ,

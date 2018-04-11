@@ -5,7 +5,11 @@
 
 P.draws.dust = () =>
 {
-  P.info.dusts.forEach((dust , index) =>
+  const dusts = P.info.dusts
+
+  P.images.dusts = P.array(dusts.length).map(P.image)
+
+  dusts.forEach((dust , index) =>
   {
     const
     canvas = document.createElement('canvas') ,
@@ -61,8 +65,7 @@ P.draws.dust = () =>
     //..................................................................................................................
     // create and address
 
-    P.images['dust' + index] = new Image
-    P.images['dust' + index].src = canvas.toDataURL()
+    P.images.dusts[index].src = canvas.toDataURL()
   })
 }
 
