@@ -17,7 +17,7 @@ P.start = () =>
   P.draws.avatar()
 
   P.resize()
-  P.updates.layout(P.builds.combat() , P.dom('#screen'))
+  P.updates.layout(P.builds.main() , P.dom('#screen'))
 }
 
 //......................................................................................................................
@@ -48,8 +48,6 @@ P.loop = () =>
     : P.keyPool.indexOf('ArrowLeft') !== -1
     ? (P.keyPool.indexOf('ArrowUp') !== -1 ? -45 : P.keyPool.indexOf('ArrowDown') !== -1 ? -135 : -90)
     : (P.keyPool.indexOf('ArrowUp') !== -1 ? 0 : P.keyPool.indexOf('ArrowDown') !== -1 ? 180 : ship.angle)
-
-  console.log(P.state.ship.angle)
 }
 
 //......................................................................................................................
