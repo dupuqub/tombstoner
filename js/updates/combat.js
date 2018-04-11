@@ -52,11 +52,11 @@ P.updates.combat = () =>
   })
 
   //....................................................................................................................
-  // draw ship
+  // draw ship's wireframe
 
-  pen.fillStyle = '#FFF'
+  pen.strokeStyle = '#F00'
   pen.beginPath()
   pen.arc(center , center , ship.radius * unit , 0 , Math.PI * 2)
-  pen.fill()
+  pen.stroke()
 }
 

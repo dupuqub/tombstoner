@@ -35,6 +35,8 @@ P.draws.dust = () =>
 
     P.array(dust.amount).forEach(() =>
     {
+      const radius = P.random(dust.radius[0] , dust.radius[1])
+
       //................................................................................................................
 
       const color =
@@ -49,8 +51,8 @@ P.draws.dust = () =>
 
       const position =
       {
-        x : P.random(0 , 2000 - dust.radius) ,
-        y : P.random(0 , 2000 - dust.radius)
+        x : P.random(0 , 2000 - radius) ,
+        y : P.random(0 , 2000 - radius)
       }
 
       //................................................................................................................
@@ -58,7 +60,7 @@ P.draws.dust = () =>
       pen.fillStyle = dust.color === 'dust' ? color : dust.color
       pen.beginPath()
       pen.moveTo(position.x , position.y)
-      pen.arc(position.x , position.y , dust.radius , 0 , Math.PI * 2)
+      pen.arc(position.x , position.y , radius , 0 , Math.PI * 2)
       pen.fill()
     })
 
