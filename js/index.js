@@ -13,9 +13,11 @@ onkeyup     = event => P.release(event)
 
 P.start = () =>
 {
-  P.resize()
   P.draws.dust()
-  P.updates.layout(P.builds.main() , P.dom('#screen'))
+  P.draws.avatar()
+
+  P.resize()
+  P.updates.layout(P.builds.combat() , P.dom('#screen'))
 }
 
 //......................................................................................................................
@@ -34,7 +36,6 @@ P.loop = () =>
   if     ( P.keyPool.indexOf('ArrowUp') !== -1)   P.state.ship.y -= P.state.ship.speed
   else if( P.keyPool.indexOf('ArrowDown') !== -1) P.state.ship.y += P.state.ship.speed
 }
-
 
 //......................................................................................................................
 
