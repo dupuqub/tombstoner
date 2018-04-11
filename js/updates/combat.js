@@ -11,13 +11,14 @@ P.updates.combat = () =>
 
   ship   = P.state.ship ,
   body   = P.info.body ,
-  center = body.h / 2 ,
+  center = canvas.width / 2 ,
   unit   = P.info.unit
+
 
   //....................................................................................................................
   // clean canvas
 
-  pen.clearRect(0 , 0 , P.info.body.w , P.info.body.h)
+  pen.clearRect(0 , 0 , canvas.width , canvas.height)
 
   //....................................................................................................................
   // draw dust
@@ -45,8 +46,8 @@ P.updates.combat = () =>
         // source
         0 ,
         0 ,
-        2000 ,
-        2000 ,
+        image.width ,
+        image.width ,
 
         // destination
         center - (x * unit) + (body.w * col) + (body.w * lft) , // px (except origin to adapt to screen)
@@ -61,11 +62,39 @@ P.updates.combat = () =>
   })
 
   //....................................................................................................................
-  // draw ship's wireframe
+  // draw ship
 
-  pen.strokeStyle = '#F00'
-  pen.beginPath()
-  pen.arc(center , center , ship.radius * unit , 0 , Math.PI * 2)
-  pen.stroke()
+  const avatar = P.images.avatar
+
+  pen.save()
+  pen.translate(center , center)
+  pen.rotate(ship.angle * Math.PI / 180)
+
+  pen.drawImage
+  (
+    avatar ,
+
+    // source
+    0 ,
+    0 ,
+    avatar.width ,
+    avatar.width ,
+
+    // destination
+    - ship.radius * unit,
+    - ship.radius * unit,
+    ship.radius * 2 * unit,
+    ship.radius * 2 * unit
+  )
+
+  pen.restore()
+
+  //....................................................................................................................
+  // draw ship's hitbox
+
+  // pen.strokeStyle = '#0F0'
+  // pen.beginPath()
+  // pen.arc(center , center , ship.radius * unit , 0 , Math.PI * 2)
+  // pen.stroke()
 }
 

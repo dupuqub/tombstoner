@@ -33,8 +33,9 @@ P.state =
   {
     x      : 0 , // units
     y      : 0 , // units
-    radius : 5 , // units
+    radius : 8 , // units
     speed  : 5 , // units
+    angle  : 0 , // degrees
   } ,
 }
 
