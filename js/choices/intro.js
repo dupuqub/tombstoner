@@ -70,7 +70,7 @@ P.choices.intro =
     const choice =
     {
       title   : 'Connections are everything' ,
-      text    : 'When the Blackstone reaches its destination it will become an antenna.<br><br>Our foundation\'s mission is to connect life across the universe' ,
+      text    : 'When the Blackstone reaches its destination it will become an antenna.<br><br>Our foundation\'s mission is to connect life across the universe.' ,
       options :
       [
         {title : 'Let\'s do this' , outcome : () => P.updates.navi(P.choices.intro[5]() , true , true)} ,
