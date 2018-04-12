@@ -8,8 +8,9 @@ const P = // project
   builds  : {} ,
   choices : {} ,
   draws   : {} ,
-  updates : {} ,
   images  : {} ,
+  renders : {} ,
+  updates : {} ,
 }
 
 //......................................................................................................................
@@ -34,8 +35,13 @@ P.state =
     x      : 0 , // units
     y      : 0 , // units
     radius : 8 , // units
-    speed  : 5 , // units
+
     angle  : 0 , // degrees
+    torque : 4 , // degrees
+
+    speed : 0.0 , // units
+    accel : 0.3 , // units
+    decel : 0.6 , // units
   } ,
 }
 
