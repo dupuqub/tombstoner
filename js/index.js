@@ -17,7 +17,7 @@ P.start = () =>
   P.draws.avatar()
 
   P.resize()
-  P.updates.layout(P.builds.combat() , P.dom('#screen'))
+  P.updates.layout(P.builds.main() , P.dom('#screen'))
 }
 
 //......................................................................................................................
