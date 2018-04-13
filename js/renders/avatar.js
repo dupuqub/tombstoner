@@ -46,5 +46,20 @@ P.renders.avatar = () =>
   // pen.beginPath()
   // pen.arc(center , center , ship.radius * unit , 0 , Math.PI * 2)
   // pen.stroke()
+
+  //....................................................................................................................
+  // direction
+
+  // const radians = (P.state.ship.angle - 90) * Math.PI / 180
+
+  // pen.strokeStyle = '#0F0'
+  // pen.beginPath()
+  // pen.moveTo(center, center)
+  // pen.lineTo
+  // (
+  //   center + Math.cos(radians) * 100 ,
+  //   center + Math.sin(radians) * 100
+  // )
+  // pen.stroke()
 }
 

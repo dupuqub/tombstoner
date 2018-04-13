@@ -49,9 +49,10 @@ P.gamepad = () =>
     const
     leftAngleModifier  = engines.left === 'forwards' ? 1 : engines.left === 'backwards' ? -1 : 0 ,
     rightAngleModifier = engines.right === 'forwards' ? -1 : engines.right === 'backwards' ? 1 : 0 ,
-    angleModifier      = leftAngleModifier + rightAngleModifier
+    angleModifier      = leftAngleModifier + rightAngleModifier ,
+    newAngle           = ship.angle + ship.torque * angleModifier
 
-    P.state.ship.angle = ship.angle + ship.torque * angleModifier
+    P.state.ship.angle = newAngle < 0 ? newAngle + 360 : newAngle < 360 ? newAngle : newAngle - 360
   }
 }
 
