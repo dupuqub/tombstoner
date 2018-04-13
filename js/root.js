@@ -39,9 +39,14 @@ P.state =
     angle  : 0 , // degrees
     torque : 4 , // degrees
 
-    speed : 0.0 , // units
-    accel : 0.3 , // units
-    decel : 0.6 , // units
+    speed :
+    {
+      now : 0 , // units
+      max : 3  // units
+    } ,
+
+    accel : 0.1 , // units
+    decel : 0.05 , // units
   } ,
 }
 

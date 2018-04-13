@@ -33,26 +33,37 @@ P.gamepad = () =>
   LEFT  = buttons[14].pressed ,
   RIGHT = buttons[15].pressed ,
 
+  S = P.keyPool.indexOf('s') !== -1 ,
+  C = P.keyPool.indexOf('c') !== -1 ,
+  L = P.keyPool.indexOf('l') !== -1 ,
+  M = P.keyPool.indexOf('m') !== -1 ,
+
   //....................................................................................................................
   // game mechanics
 
-  ship = P.state.ship ,
-
   engines =
   {
-    left  : L2 && L1 ? 'side' : L2 && ! L1 ? 'forwards' : ! L2 && L1 ? 'backwards' : null ,
-    right : R2 && R1 ? 'side' : R2 && ! R1 ? 'forwards' : ! R2 && R1 ? 'backwards' : null
+    left :
+
+      L2 && L1 || S && C
+      ? 'side'
+      : L2 && ! L1 || S && ! C
+      ? 'forwards'
+      : ! L2 && L1 || ! S && C
+      ? 'backwards'
+      : null ,
+
+    right :
+
+      R2 && R1 || L && M
+      ? 'side'
+      : R2 && ! R1 || L && ! M
+      ? 'forwards'
+      : ! R2 && R1 || ! L && M
+      ? 'backwards'
+      : null
   }
 
-  if(engines.left || engines.right)
-  {
-    const
-    leftAngleModifier  = engines.left === 'forwards' ? 1 : engines.left === 'backwards' ? -1 : 0 ,
-    rightAngleModifier = engines.right === 'forwards' ? -1 : engines.right === 'backwards' ? 1 : 0 ,
-    angleModifier      = leftAngleModifier + rightAngleModifier ,
-    newAngle           = ship.angle + ship.torque * angleModifier
-
-    P.state.ship.angle = newAngle < 0 ? newAngle + 360 : newAngle < 360 ? newAngle : newAngle - 360
-  }
+  P.moveAvatar(engines)
 }
 
