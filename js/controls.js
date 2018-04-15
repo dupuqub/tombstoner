@@ -46,7 +46,7 @@ P.controls = () =>
     left :
 
       L2 && L1 || S && C
-      ? 'side'
+      ? 'sideways'
       : L2 && ! L1 || S && ! C
       ? 'forwards'
       : ! L2 && L1 || ! S && C
@@ -56,7 +56,7 @@ P.controls = () =>
     right :
 
       R2 && R1 || L && M
-      ? 'side'
+      ? 'sideways'
       : R2 && ! R1 || L && ! M
       ? 'forwards'
       : ! R2 && R1 || ! L && M

@@ -24,8 +24,8 @@ P.renders.dust = () =>
       row = innerIndex > 5 ? -1 : innerIndex > 2 ? 0 : 1 ,
       col = [0,3,6].indexOf(innerIndex) !== -1 ? -1 : [1,4,7].indexOf(innerIndex) !== -1 ? 0 : 1 ,
 
-      x = ship.x / unit * dust.parallax , // px
-      y = ship.y / unit * dust.parallax , // px
+      x = ship.x * dust.parallax , // units
+      y = ship.y * dust.parallax , // units
 
       lft = Math.floor(x / 800) , // px
       top = Math.floor(y / 800)   // px
