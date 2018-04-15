@@ -9,17 +9,17 @@ P.decelAvatar = engines =>
   unit = P.info.unit ,
   ship = P.state.ship
 
-  if(ship.speed.now > 0)
+  if(ship.speed.common.now > 0)
   {
-    const newSpeed = ship.speed.now - ship.decel
+    const newSpeed = ship.speed.common.now - ship.decel
 
-    P.state.ship.speed.now = newSpeed < 0 ? 0 : newSpeed
+    P.state.ship.speed.common.now = newSpeed < 0 ? 0 : newSpeed
   }
-  else if(ship.speed.now < 0)
+  else if(ship.speed.common.now < 0)
   {
-    const newSpeed = ship.speed.now + ship.decel
+    const newSpeed = ship.speed.common.now + ship.decel
 
-    P.state.ship.speed.now = newSpeed > 0 ? 0 : newSpeed
+    P.state.ship.speed.common.now = newSpeed > 0 ? 0 : newSpeed
   }
 }
 

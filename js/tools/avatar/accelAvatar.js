@@ -34,17 +34,33 @@ P.accelAvatar = engines =>
   rightSpeedModifier = right === 'forwards' ? 2 : engines.right === 'backwards' ? -1 : 0 ,
   speedModifier      = (leftSpeedModifier + rightSpeedModifier) / 2 ,
 
-  newAccel = ship.accel * speedModifier ,
-  maxSpeed = ship.speed.max * (speedModifier > 0 ? speedModifier : 1) ,
-  newSpeed = ship.speed.now + newAccel
+  commonAccel = ship.accel * speedModifier ,
+  maxSpeed = ship.speed.common.max * (speedModifier > 0 ? speedModifier : 1) ,
+  newCommon = ship.speed.common.now + commonAccel
 
-  P.state.ship.speed.now =
+  P.state.ship.speed.common.now =
 
-    newSpeed > 0 && newSpeed > maxSpeed
+      newCommon > 0 && newCommon > maxSpeed
     ? maxSpeed
-    : newSpeed < 0 && newSpeed < - maxSpeed
+    : newCommon < 0 && newCommon < - maxSpeed
     ? - maxSpeed
-    : newSpeed
+    : newCommon
+
+  if(left === 'sideways' && right !== 'sideways'
+  || left !== 'sideways' && right === 'sideways')
+  {
+    const
+    lateralAccel = commonAccel ? commonAccel : 1 ,
+    newLateral   = ship.speed.lateral.now + (left === 'sideways' ? lateralAccel : - lateralAccel)
+
+    P.state.ship.speed.lateral.now =
+
+        newLateral > 0 && newLateral > maxSpeed
+      ? maxSpeed
+      : newLateral < 0 && newLateral < - maxSpeed
+      ? - maxSpeed
+      : newLateral
+  }
 
   if(left === 'sideways' && (right === 'sideways' || right === null)
   || right === 'sideways' && (left === 'sideways' || left === null))

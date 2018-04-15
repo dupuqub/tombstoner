@@ -41,10 +41,17 @@ P.state =
 
     speed :
     {
-      now : 0 , // units
-      max : 3  // units
+      common :
+      {
+        now : 0 , // units
+        max : 3 , // units
+      } ,
+      lateral :
+      {
+        now : 0 , // units
+        max : 3 , // units
+      } ,
     } ,
-
     accel : 0.1 , // units
     decel : 0.05 , // units
   } ,
