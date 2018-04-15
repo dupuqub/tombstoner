@@ -5,6 +5,7 @@
 
 P.accelAvatar = engines =>
 {
+  //....................................................................................................................
   // angle
 
   const
@@ -27,7 +28,8 @@ P.accelAvatar = engines =>
     ? newAngle
     : newAngle - 360
 
-  // speed
+  //....................................................................................................................
+  // common speed
 
   const
   leftSpeedModifier  = left === 'forwards' ? 2 : left === 'backwards' ? -1 : 0 ,
@@ -46,6 +48,9 @@ P.accelAvatar = engines =>
     ? - maxSpeed
     : newCommon
 
+  //....................................................................................................................
+  // lateral speed
+
   if(left === 'sideways' && right !== 'sideways'
   || left !== 'sideways' && right === 'sideways')
   {
@@ -61,6 +66,9 @@ P.accelAvatar = engines =>
       ? - maxSpeed
       : newLateral
   }
+
+  //....................................................................................................................
+  // secondary common decel
 
   if(left === 'sideways' && (right === 'sideways' || right === null)
   || right === 'sideways' && (left === 'sideways' || left === null))
