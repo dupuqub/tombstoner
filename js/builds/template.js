@@ -7,13 +7,23 @@ P.builds.template = () =>
 {
   const myDom =
   {
-    id      : 'template' ,
-    classes : ['layout' , 'center'] ,
+    type       : '' ,
+    id         : 'template' ,
+    classes    : ['layout' , 'center'] ,
+    attributes :
+    [
+      {title : '' , value : 0} ,
+    ] ,
     content :
     [
       {
-        id      : '' ,
-        classes : [] ,
+        type       : '' ,
+        id         : '' ,
+        classes    : [] ,
+        attributes :
+        [
+          {title : '' , value : 0} ,
+        ] ,
         content : []
       } ,
     ]

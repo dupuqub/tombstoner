@@ -11,6 +11,8 @@ P.updates.combat = () =>
 
   pen.clearRect(0 , 0 , canvas.width , canvas.height)
 
+  P.moves.avatar()
+
   P.renders.dust()
   P.renders.avatar()
 }

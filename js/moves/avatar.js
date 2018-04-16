@@ -3,40 +3,37 @@
 
 //......................................................................................................................
 
-P.moveAvatar = engines =>
+P.moves.avatar = () =>
 {
-  const
-  unit = P.info.unit ,
-  ship = P.state.ship
+  const unit = P.info.unit
+
+  let
+  ship    = P.state.ship ,
+  speed   = ship.speed ,
+  engines = ship.engines
+
+  //....................................................................................................................
 
   engines.left || engines.right
-  ? P.accelAvatar(engines)
-  : P.decelAvatar(engines)
+  ? P.accels.avatar()
+  : P.decels.avatar()
 
   //....................................................................................................................
-  // decel lateral
 
-  if(ship.speed.lateral.now > 0)
+  if(engines.left !== 'sideways' && engines.right !== 'sideways'
+  || engines.left === 'sideways' && engines.right === 'sideways')
   {
-    const newSpeed = ship.speed.lateral.now - ship.decel
-
-    P.state.ship.speed.lateral.now = newSpeed < 0 ? 0 : newSpeed
-  }
-  else if(ship.speed.lateral.now < 0)
-  {
-    const newSpeed = ship.speed.lateral.now + ship.decel
-
-    P.state.ship.speed.lateral.now = newSpeed > 0 ? 0 : newSpeed
+    P.decels.avatarLateral()
   }
 
   //....................................................................................................................
-  // move
 
-  const speed = P.state.ship.speed
+  ship  = P.state.ship ,
+  speed = ship.speed
 
   if(speed.common.now)
   {
-    const radians = (P.state.ship.angle - 90) * Math.PI / 180
+    const radians = (ship.angle - 90) * Math.PI / 180
 
     P.state.ship.x += speed.common.now * Math.cos(radians) * unit / 2
     P.state.ship.y += speed.common.now * Math.sin(radians) * unit / 2
@@ -44,7 +41,7 @@ P.moveAvatar = engines =>
 
   if(speed.lateral.now)
   {
-    const radians = (P.state.ship.angle - 180) * Math.PI / 180
+    const radians = (ship.angle - 180) * Math.PI / 180
 
     P.state.ship.x += speed.lateral.now * Math.cos(radians) * unit / 2
     P.state.ship.y += speed.lateral.now * Math.sin(radians) * unit / 2

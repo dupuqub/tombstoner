@@ -36,12 +36,12 @@ P.controls = () =>
   S = P.keyPool.indexOf('s') !== -1 ,
   C = P.keyPool.indexOf('c') !== -1 ,
   L = P.keyPool.indexOf('l') !== -1 ,
-  M = P.keyPool.indexOf('m') !== -1 ,
+  M = P.keyPool.indexOf('m') !== -1
 
   //....................................................................................................................
   // game mechanics
 
-  engines =
+  P.state.ship.engines =
   {
     left :
 
@@ -63,7 +63,5 @@ P.controls = () =>
       ? 'backwards'
       : null
   }
-
-  P.moveAvatar(engines)
 }
 

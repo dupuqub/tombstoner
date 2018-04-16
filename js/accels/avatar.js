@@ -3,7 +3,7 @@
 
 //......................................................................................................................
 
-P.accelAvatar = engines =>
+P.accels.avatar = () =>
 {
   //....................................................................................................................
   // angle
@@ -12,8 +12,9 @@ P.accelAvatar = engines =>
   unit = P.info.unit ,
   ship = P.state.ship ,
 
-  left  = engines.left ,
-  right = engines.right ,
+  engines = ship.engines ,
+  left    = engines.left ,
+  right   = engines.right ,
 
   leftAngleModifier  = left === 'forwards' ? 1 : left === 'backwards' ? -1 : 0 ,
   rightAngleModifier = right === 'forwards' ? -1 : right === 'backwards' ? 1 : 0 ,
@@ -37,8 +38,8 @@ P.accelAvatar = engines =>
   speedModifier      = (leftSpeedModifier + rightSpeedModifier) / 2 ,
 
   commonAccel = ship.accel * speedModifier ,
-  maxSpeed = ship.speed.common.max * (speedModifier > 0 ? speedModifier : 1) ,
-  newCommon = ship.speed.common.now + commonAccel
+  maxSpeed    = ship.speed.common.max * (speedModifier > 0 ? speedModifier : 1) ,
+  newCommon   = ship.speed.common.now + commonAccel
 
   P.state.ship.speed.common.now =
 
@@ -73,7 +74,7 @@ P.accelAvatar = engines =>
   if(left === 'sideways' && (right === 'sideways' || right === null)
   || right === 'sideways' && (left === 'sideways' || left === null))
   {
-    P.decelAvatar()
+    P.decels.avatar()
   }
 }
 
