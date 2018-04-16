@@ -3,23 +3,23 @@
 
 //......................................................................................................................
 
-P.decels.avatar = engines =>
+P.decels.avatar = type => // 'common' or 'lateral'
 {
   const
-  unit = P.info.unit ,
-  ship = P.state.ship
+  ship  = P.state.ship ,
+  speed = ship.speed
 
-  if(ship.speed.common.now > 0)
+  if(speed[type].now > 0)
   {
-    const newSpeed = ship.speed.common.now - ship.decel
+    const newSpeed = speed[type].now - ship.decel
 
-    P.state.ship.speed.common.now = newSpeed < 0 ? 0 : newSpeed
+    P.state.ship.speed[type].now = newSpeed < 0 ? 0 : newSpeed
   }
-  else if(ship.speed.common.now < 0)
+  else if(speed[type].now < 0)
   {
-    const newSpeed = ship.speed.common.now + ship.decel
+    const newSpeed = speed[type].now + ship.decel
 
-    P.state.ship.speed.common.now = newSpeed > 0 ? 0 : newSpeed
+    P.state.ship.speed[type].now = newSpeed > 0 ? 0 : newSpeed
   }
 }
 

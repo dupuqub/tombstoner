@@ -5,31 +5,14 @@
 
 P.moves.avatar = () =>
 {
-  const unit = P.info.unit
-
-  let
+  const
+  unit    = P.info.unit ,
   ship    = P.state.ship ,
-  speed   = ship.speed ,
-  engines = ship.engines
+  engines = ship.engines ,
+  speed   = ship.speed
 
   //....................................................................................................................
-
-  engines.left || engines.right
-  ? P.accels.avatar()
-  : P.decels.avatar()
-
-  //....................................................................................................................
-
-  if(engines.left !== 'sideways' && engines.right !== 'sideways'
-  || engines.left === 'sideways' && engines.right === 'sideways')
-  {
-    P.decels.avatarLateral()
-  }
-
-  //....................................................................................................................
-
-  ship  = P.state.ship ,
-  speed = ship.speed
+  // draw last frame
 
   if(speed.common.now)
   {
@@ -46,5 +29,19 @@ P.moves.avatar = () =>
     P.state.ship.x += speed.lateral.now * Math.cos(radians) * unit / 2
     P.state.ship.y += speed.lateral.now * Math.sin(radians) * unit / 2
   }
+
+  //....................................................................................................................
+  // calculate next frame
+
+  engines.left || engines.right
+  ? P.accels.avatar()
+  : P.decels.avatar('common')
+
+  if(engines.left !== 'sideways' && engines.right !== 'sideways'
+  || engines.left === 'sideways' && engines.right === 'sideways')
+  {
+    P.decels.avatar('lateral')
+  }
+
 }
 

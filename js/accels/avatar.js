@@ -37,16 +37,16 @@ P.accels.avatar = () =>
   rightSpeedModifier = right === 'forwards' ? 2 : engines.right === 'backwards' ? -1 : 0 ,
   speedModifier      = (leftSpeedModifier + rightSpeedModifier) / 2 ,
 
-  commonAccel = ship.accel * speedModifier ,
-  maxSpeed    = ship.speed.common.max * (speedModifier > 0 ? speedModifier : 1) ,
-  newCommon   = ship.speed.common.now + commonAccel
+  commonAccel    = ship.accel * speedModifier ,
+  commonMaxSpeed = ship.speed.common.max * (speedModifier > 0 ? speedModifier : 1) ,
+  newCommon      = ship.speed.common.now + commonAccel
 
   P.state.ship.speed.common.now =
 
-      newCommon > 0 && newCommon > maxSpeed
-    ? maxSpeed
-    : newCommon < 0 && newCommon < - maxSpeed
-    ? - maxSpeed
+      newCommon > 0 && newCommon > commonMaxSpeed
+    ? commonMaxSpeed
+    : newCommon < 0 && newCommon < -commonMaxSpeed
+    ? -commonMaxSpeed
     : newCommon
 
   //....................................................................................................................
@@ -56,15 +56,16 @@ P.accels.avatar = () =>
   || left !== 'sideways' && right === 'sideways')
   {
     const
-    lateralAccel = commonAccel ? commonAccel : 1 ,
-    newLateral   = ship.speed.lateral.now + (left === 'sideways' ? lateralAccel : - lateralAccel)
+    lateralAccel    = ship.accel ,
+    lateralMaxSpeed = ship.speed.lateral.max * (speedModifier > 0 ? speedModifier : 1) ,
+    newLateral      = ship.speed.lateral.now + (left === 'sideways' ? lateralAccel : -lateralAccel)
 
     P.state.ship.speed.lateral.now =
 
-        newLateral > 0 && newLateral > maxSpeed
-      ? maxSpeed
-      : newLateral < 0 && newLateral < - maxSpeed
-      ? - maxSpeed
+        newLateral > 0 && newLateral > lateralMaxSpeed
+      ? lateralMaxSpeed
+      : newLateral < 0 && newLateral < -lateralMaxSpeed
+      ? -lateralMaxSpeed
       : newLateral
   }
 
@@ -74,7 +75,7 @@ P.accels.avatar = () =>
   if(left === 'sideways' && (right === 'sideways' || right === null)
   || right === 'sideways' && (left === 'sideways' || left === null))
   {
-    P.decels.avatar()
+    P.decels.avatar('common')
   }
 }
 
