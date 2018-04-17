@@ -50,12 +50,16 @@ P.state =
       common :
       {
         now : 0 , // units
-        max : 3 , // units
+        max :
+        {
+          now : 0 , // units
+          max : 1 , // units
+        }
       } ,
       lateral :
       {
         now : 0 , // units
-        max : 3 , // units
+        max : 1 , // units
       } ,
     } ,
 

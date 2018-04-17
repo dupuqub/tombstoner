@@ -9,7 +9,6 @@ P.accels.avatar = () =>
   // angle
 
   const
-  unit = P.info.unit ,
   ship = P.state.ship ,
 
   engines = ship.engines ,
@@ -34,20 +33,25 @@ P.accels.avatar = () =>
 
   const
   leftSpeedModifier  = left === 'forwards' ? 2 : left === 'backwards' ? -1 : 0 ,
-  rightSpeedModifier = right === 'forwards' ? 2 : engines.right === 'backwards' ? -1 : 0 ,
+  rightSpeedModifier = right === 'forwards' ? 2 : right === 'backwards' ? -1 : 0 ,
   speedModifier      = (leftSpeedModifier + rightSpeedModifier) / 2 ,
 
-  commonAccel    = ship.accel * speedModifier ,
-  commonMaxSpeed = ship.speed.common.max * (speedModifier > 0 ? speedModifier : 1) ,
-  newCommon      = ship.speed.common.now + commonAccel
+  common      = ship.speed.common ,
+  commonAccel = ship.accel * speedModifier ,
+  commonNew   = common.now + commonAccel ,
+  commonAim   = common.max.max * (speedModifier > 0 ? speedModifier : 1) ,
+  commonStep  = (commonAim - common.max.now) / 20 ,
+  commonMax   = common.max.now + commonStep ,
+  commonFinal =
 
-  P.state.ship.speed.common.now =
+      commonNew > 0 && commonNew > commonMax
+    ? commonMax
+    : commonNew < 0 && commonNew < -commonMax
+    ? -commonMax
+    : commonNew
 
-      newCommon > 0 && newCommon > commonMaxSpeed
-    ? commonMaxSpeed
-    : newCommon < 0 && newCommon < -commonMaxSpeed
-    ? -commonMaxSpeed
-    : newCommon
+  P.state.ship.speed.common.max.now = commonMax
+  P.state.ship.speed.common.now = commonFinal
 
   //....................................................................................................................
   // lateral speed
@@ -56,17 +60,18 @@ P.accels.avatar = () =>
   || left !== 'sideways' && right === 'sideways')
   {
     const
-    lateralAccel    = ship.accel ,
-    lateralMaxSpeed = ship.speed.lateral.max * (speedModifier > 0 ? speedModifier : 1) ,
-    newLateral      = ship.speed.lateral.now + (left === 'sideways' ? lateralAccel : -lateralAccel)
+    lateral      = ship.speed.lateral ,
+    lateralAccel = ship.accel * 2 ,
+    lateralNew   = lateral.now + (left === 'sideways' ? lateralAccel : -lateralAccel) ,
+    lateralFinal =
 
-    P.state.ship.speed.lateral.now =
+        lateralNew > 0 && lateralNew > lateral.max
+      ? lateral.max
+      : lateralNew < 0 && lateralNew < -lateral.max
+      ? -lateral.max
+      : lateralNew
 
-        newLateral > 0 && newLateral > lateralMaxSpeed
-      ? lateralMaxSpeed
-      : newLateral < 0 && newLateral < -lateralMaxSpeed
-      ? -lateralMaxSpeed
-      : newLateral
+    P.state.ship.speed.lateral.now = lateralFinal
   }
 
   //....................................................................................................................
