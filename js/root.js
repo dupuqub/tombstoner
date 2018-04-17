@@ -42,7 +42,7 @@ P.state =
     y      : 0 , // units
     radius : 8 , // units
 
-    angle  : 0 , // degrees
+    angle  : 270 , // degrees
     torque : 4 , // degrees
 
     speed :

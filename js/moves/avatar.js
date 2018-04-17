@@ -16,7 +16,7 @@ P.moves.avatar = () =>
 
   if(speed.common.now)
   {
-    const radians = (ship.angle - 90) * Math.PI / 180
+    const radians = ship.angle * Math.PI / 180
 
     P.state.ship.x += speed.common.now * Math.cos(radians) * unit
     P.state.ship.y += speed.common.now * Math.sin(radians) * unit
@@ -24,7 +24,7 @@ P.moves.avatar = () =>
 
   if(speed.lateral.now)
   {
-    const radians = (ship.angle - 180) * Math.PI / 180
+    const radians = (ship.angle - 90) * Math.PI / 180
 
     P.state.ship.x += speed.lateral.now * Math.cos(radians) * unit
     P.state.ship.y += speed.lateral.now * Math.sin(radians) * unit
