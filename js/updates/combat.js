@@ -13,7 +13,11 @@ P.updates.combat = () =>
 
   P.moves.avatar()
 
+  P.updates.timeouts()
+  P.updates.particles()
+
   P.renders.dust()
+  P.renders.particles()
   P.renders.avatar()
 }
 
