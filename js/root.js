@@ -5,18 +5,20 @@
 
 const P = // project
 {
-  builds  : {} ,
-  choices : {} ,
-  draws   : {} ,
-  renders : {} ,
-  updates : {} ,
+  builds   : {} ,
+  choices  : {} ,
+  draws    : {} ,
+  renders  : {} ,
+  timeouts : {} ,
+  updates  : {} ,
 
-  images  : {} ,
+  accels : {} ,
+  decels : {} ,
+  moves  : {} ,
 
-  accels  : {} ,
-  decels  : {} ,
-  moves   : {} ,
+  images : {} ,
 
+  particles : [] ,
 }
 
 //......................................................................................................................
