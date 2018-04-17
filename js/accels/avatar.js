@@ -18,15 +18,16 @@ P.accels.avatar = () =>
   leftAngleModifier  = left === 'forwards' ? 1 : left === 'backwards' ? -1 : 0 ,
   rightAngleModifier = right === 'forwards' ? -1 : right === 'backwards' ? 1 : 0 ,
   angleModifier      = leftAngleModifier + rightAngleModifier ,
-  newAngle           = ship.angle + ship.torque * angleModifier
-
-  P.state.ship.angle =
+  newAngle           = ship.angle + ship.torque * angleModifier ,
+  finalAngle         =
 
       newAngle < 0
     ? newAngle + 360
     : newAngle < 360
     ? newAngle
     : newAngle - 360
+
+  P.state.ship.angle = finalAngle
 
   //....................................................................................................................
   // common speed
