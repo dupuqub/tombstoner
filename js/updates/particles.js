@@ -9,7 +9,7 @@ P.updates.particles = () =>
 
     P.particles
 
-      .filter(particle => particle.color.a > 0 && particle.radius > 0)
+      .filter(particle => particle.color.a > 0 && particle.radius < 200)
       .map(particle =>
       {
         const
@@ -36,6 +36,6 @@ P.updates.particles = () =>
 
         return newParticle
       })
-      .filter(particle => particle.color.a && particle.radius > 0.1)
+      .filter(particle => particle.color.a && particle.radius < 200)
 }
 

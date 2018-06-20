@@ -21,14 +21,14 @@ P.draws.dust = () =>
     //..................................................................................................................
     // wireframe
 
-    // pen.strokeStyle = '#F00'
-    // pen.beginPath()
-    // pen.moveTo(0 , 0)
-    // pen.lineTo(2000 , 0)
-    // pen.lineTo(2000 , 2000)
-    // pen.lineTo(0 , 2000)
-    // pen.lineTo(0 , 0)
-    // pen.stroke()
+    pen.strokeStyle = '#F00'
+    pen.beginPath()
+    pen.moveTo(0 , 0)
+    pen.lineTo(2000 , 0)
+    pen.lineTo(2000 , 2000)
+    pen.lineTo(0 , 2000)
+    pen.lineTo(0 , 0)
+    pen.stroke()
 
     //..................................................................................................................
     // dust

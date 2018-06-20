@@ -18,6 +18,6 @@ P.updates.combat = () =>
 
   P.renders.dust()
   P.renders.particles()
-  P.renders.avatar()
+  // P.renders.avatar()
 }
 
